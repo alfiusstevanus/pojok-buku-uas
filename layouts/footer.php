@@ -1,33 +1,42 @@
 </main>
-<footer class="footer bg-secondary">
+<footer class="footer bg-30">
     <div class="container pt-5">
-        <div class="row">
+        <div class="row text-center">
             <div class="col-lg-4">
-                <div class="mx-2">
-                    <p>
-                        Pojok Buku adalah sebuah website jual beli buku yang menyediakan beragam pilihan buku untuk memenuhi kebutuhan penggemar literatur. Dengan antarmuka yang ramah pengguna, pengunjung dapat dengan mudah menjelajahi koleksi buku yang tersedia, mulai dari fiksi hingga non-fiksi, sastra klasik hingga terkini, serta berbagai genre lainnya..
+                <div>
+                    <div class="mb-2">
+                        <a href=""><img src="images/logobookscorner.png" width="150" height="auto" alt="logo"></a>
+                    </div>
+
+                    <p class="ps-4" style="text-align: justify;">
+                        Books Corner is a website for buying and selling books. With a user-friendly interface, visitors can easily explore the collection of books available, ranging from fiction to non-fiction, classic to current literature, as well as various other genres....
+                        We build this website with love and to bring fellow book readers closer together.
                     </p>
-                    <a href="#"><img src="img/payment.png" alt=""></a>
+
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="mx-2">
+            <div class="col-lg-4 ">
+                <div class="mx-5">
                     <ul>
-                        <h3>About Us:</h3>
+                        <div class="mb-4">
+                            <h3>About Us:</h3>
+                        </div>
                         <li>Alfius Stevanus Ginting</li>
                         <li>Azzila Deswita Utami</li>
-                        <li>Ramdhan Mahfudz</li>
+                        <li>Ramdhan Mahfuzh</li>
                         <li>Salman Alfaridzi</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="mx-2">
+                <div>
                     <ul>
-                        <h3>Contact Us:</h3>
+                        <div class="mb-4">
+                            <h3>Contact Us:</h3>
+                        </div>
                         <li><a href="https://www.instagram.com/alfiusstevanus">www.instagram.com/alfiusstevanus</a></li>
                         <li><a href="https://www.instagram.com/azila">www.instagram.com/azila</a></li>
-                        <li><a href="https://www.instagram.com/ramdan">www.instagram.com/ramdan</a></li>
+                        <li><a href="https://www.instagram.com/ramdhan_mzh">www.instagram.com/ramdhan_mzh/</a></li>
                         <li><a href="https://www.instagram.com/salman">www.instagram.com/salman</a></li>
                         <br>
                         <p>© Copyright 2023 - <a href="https://github.com/alfiusstevanus" target="_blank">Pojok Buku</a>
