@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+footer li a {
+    text-decoration: none;
+    color: black;
+}
+
+footer li {
+    list-style: none;
+}
