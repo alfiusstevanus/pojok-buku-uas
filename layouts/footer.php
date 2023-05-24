@@ -1,11 +1,11 @@
 </main>
-<footer class="footer bg-30">
+<footer id="aboutus" class="footer bg-30">
     <div class="container pt-5">
         <div class="row text-center">
             <div class="col-lg-4">
                 <div>
                     <div class="mb-2">
-                        <a href=""><img src="images/logobookscorner.png" width="150" height="auto" alt="logo"></a>
+                        <a href=""><img src="images/logobookscorner.png" width="200" height="auto" alt="logo"></a>
                     </div>
 
                     <p class="ps-4" style="text-align: justify;">
@@ -34,10 +34,10 @@
                         <div class="mb-4">
                             <h3>Contact Us:</h3>
                         </div>
-                        <li><a href="https://www.instagram.com/alfiusstevanus">www.instagram.com/alfiusstevanus</a></li>
-                        <li><a href="https://www.instagram.com/azila">www.instagram.com/azila</a></li>
-                        <li><a href="https://www.instagram.com/ramdhan_mzh">www.instagram.com/ramdhan_mzh/</a></li>
-                        <li><a href="https://www.instagram.com/salman">www.instagram.com/salman</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/alfiusstevanus">www.instagram.com/alfiusstevanus</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/azziladest">www.instagram.com/azziladest</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/ramdhan_mzh">www.instagram.com/ramdhan_mzh</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/slmnalfdzi_">www.instagram.com/slmnalfdzi_</a></li>
                         <br>
                         <p>© Copyright 2023 - <a href="https://github.com/alfiusstevanus" target="_blank">Pojok Buku</a>
                         </p>
