@@ -3,6 +3,13 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    margin-top: auto;
 }
 
 footer li a {
@@ -12,4 +19,84 @@ footer li a {
 
 footer li {
     list-style: none;
+    color: black;
+}
+
+footer p {
+    color: black;
+}
+
+footer h3 {
+    color: black;
+}
+
+header li :hover {
+    transform: translate(0px, -3px);
+
+
+}
+
+.hero-label button {
+    width: 200px;
+    height: 50px;
+    background-color: #ED5006;
+    color: #f5f5f5;
+    border: #ED5006;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: auto;
+
+}
+
+.hero-label {
+    margin-left: 2rem;
+    margin-top: 7rem;
+    position: absolute;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* untuk kebutuhan color dari palette */
+
+.c-10 {
+    color: #ED5006;
+}
+
+.c-30 {
+    color: #E1D9CD;
+}
+
+.c-60 {
+    color: #f5f5f5;
+}
+
+
+
+/* untuk kebutuhan background dari palette */
+
+
+
+.bg-10 {
+    background-color: #ED5006;
+
+}
+
+.bg-30 {
+
+    background-color: #E1D9CD;
+}
+
+.bg-60 {
+
+    background-color: #f5f5f5;
+
 }
