@@ -2,20 +2,14 @@
 include('layouts/header.php');
 ?>
 <section class="hero">
-
-
     <div class="hero-label justify-content-center">
         <h4 class="h4 mb-4">SPRING - DISCOUNT</h4>
         <h1 class="mt-2">Enjoy the convenience of book search</h1>
         <p class="lead h3 ">Knowledge is contained within the pages, building new worlds in the imagination.</p>
         <button class="mt-5 ">Shop Now</button>
     </div>
-
-</section>
-<section>
     <img class="images-fluid" src="images/Untitled-1.jpg">
 </section>
-
 
 <section class="container mt-5">
     <div class="d-block mt-5">
