@@ -19,7 +19,7 @@
                 <div class="mx-5">
                     <ul>
                         <div class="mb-4">
-                            <h3>About Us:</h3>
+                            <h3>Dev. Team:</h3>
                         </div>
                         <li>Alfius Stevanus Ginting</li>
                         <li>Azzila Deswita Utami</li>

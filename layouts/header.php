@@ -34,10 +34,10 @@
                 <div class="collapse navbar-collapse justify-content-center mx-auto ps-5 " id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item ps-5">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link " aria-current="page" href="#">Buy</a>
+                            <a class="nav-link " aria-current="page" href="buku.php">Buy</a>
                         </li>
                         <li class="nav-item ps-5">
                             <a class="nav-link " aria-current="page" href="#aboutus">About Us</a>
@@ -65,4 +65,4 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="mb-5">
