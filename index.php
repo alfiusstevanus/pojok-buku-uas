@@ -18,102 +18,95 @@ include('layouts/header.php');
     <img class="images-fluid" src="images/Untitled-1.jpg">
 </section>
 
-<<<<<<< HEAD
 <section class="container mt-5">
     <div class="d-block mt-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam debitis nesciunt. Iusto expedita maiores nihil, iste voluptas optio ipsa quidem. Officia, perspiciatis atque. Quas, ex beatae quisquam inventore, corrupti accusamus ducimus et non veniam itaque recusandae adipisci ab. Dolore, atque molestiae beatae deserunt odit culpa minima cumque repellat, ullam consequatur nulla sint labore. Magnam harum sed pariatur odit consequatur reiciendis optio distinctio repellat? Tempora perferendis, dolorum ex qui aperiam repellendus non voluptas debitis aspernatur sapiente nulla consequatur nam dolorem modi odit reiciendis unde iste corrupti rerum animi quis cum atque aut praesentium. Rerum beatae obcaecati magnam eveniet earum libero.</p>
-=======
-<!-- content PAGE -->
+        <!-- content PAGE -->
 
-<div class="container mt-3 mb-3">
-    <div class="row p-2">
-        <div class="col-md-3">
-            <div class="">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/download (4).jpeg.jpg" class="d-block w-100 " height="630px" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
+        <div class="container mt-3 mb-3">
+            <div class="row p-2">
+                <div class="col-md-3">
+                    <div class="">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/download (4).jpeg.jpg" class="d-block w-100 " height="630px" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="jumbotron jumbo-right bg-30 p-3">
+                        <div>
+                            <h6>SPRING-DISCOUNT List</h6>
+                            <hr>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Hero: The Life and Legend of Lawrence of Arabia</h5>
+                                    <p>From Michael Korda, author of the New York Times bestselling Eisenhower biography Ike and the captivating Battle of Britain book With Wings Like Eagles, comes the critically-acclaimed definitive biography of T. E. Lawrence—the legendary British soldier, strategist, scholar, and adventurer whose exploits as “Lawrence of Arabia” created a legacy of mythic proportions in his own lifetime. Many know T.E. Lawrence from David Lean’s Oscar-winning 1962 biopic—based, itself, upon Lawrence’s autobiographical Seven Pillars of Wisdom—but in the tradition of modern biographers like John Meacham, David McCullough, and Barbara Leaming, Michael Korda’s penetrating new examination reveals new depth and character in the twentieth century’s quintessential English hero.</p>
+                                </div>
+                            </li>
+                            <li class="media my-4">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Quarter Life Crisis</h5>
+                                    <p>Anxious and confused about the future? Can't decide on a career? Choosing the right partner? Idealism or reality? What do you want to do after graduation?</p>
+                                    <p>Language
+                                        : Indonesian,
+
+                                        Release Date
+                                        : November 18, 2019,
+
+                                        Author
+                                        : Gerhana Nurhayati Putri,
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Harry Potter and the Philosopher's Stone</h5>
+                                    <p>Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div class="col-md-9">
-            <div class="jumbotron jumbo-right bg-30 p-3">
-                <div>
-                    <h6>SPRING-DISCOUNT List</h6>
-                    <hr>
-                </div>
-                <ul class="list-unstyled">
-                    <li class="media">
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1">Hero: The Life and Legend of Lawrence of Arabia</h5>
-                            <p>From Michael Korda, author of the New York Times bestselling Eisenhower biography Ike and the captivating Battle of Britain book With Wings Like Eagles, comes the critically-acclaimed definitive biography of T. E. Lawrence—the legendary British soldier, strategist, scholar, and adventurer whose exploits as “Lawrence of Arabia” created a legacy of mythic proportions in his own lifetime. Many know T.E. Lawrence from David Lean’s Oscar-winning 1962 biopic—based, itself, upon Lawrence’s autobiographical Seven Pillars of Wisdom—but in the tradition of modern biographers like John Meacham, David McCullough, and Barbara Leaming, Michael Korda’s penetrating new examination reveals new depth and character in the twentieth century’s quintessential English hero.</p>
-                        </div>
-                    </li>
-                    <li class="media my-4">
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1">Quarter Life Crisis</h5>
-                            <p>Anxious and confused about the future? Can't decide on a career? Choosing the right partner? Idealism or reality? What do you want to do after graduation?</p>
-                            <p>Language
-                                : Indonesian,
 
-                                Release Date
-                                : November 18, 2019,
-
-                                Author
-                                : Gerhana Nurhayati Putri,
-                            </p>
+        <div class="container mb-4 mt-3">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="jumbotron bg-30 p-3">
+                        <div class="">
+                            <h2>Enjoy Every Page</h2>
+                            <hr>
                         </div>
-                    </li>
-                    <li class="media">
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1">Harry Potter and the Philosopher's Stone</h5>
-                            <p>Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.</p>
+                        <div class="">
+                            <p>Enjoy every page that the author has created for you, because every page is made with energy, heart and mind.</p>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
->>>>>>> 591d4fc50334d6d9d0ecb1c776d9163332a29f43
-    </div>
-</div>
-
-<div class="container mb-4 mt-3">
-    <div class="row text-center">
-        <div class="col-md-12">
-            <div class="jumbotron bg-30 p-3">
-                <div class="">
-                    <h2>Enjoy Every Page</h2>
-                    <hr>
-                </div>
-                <div class="">
-                    <p>Enjoy every page that the author has created for you, because every page is made with energy, heart and mind.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 <?php
