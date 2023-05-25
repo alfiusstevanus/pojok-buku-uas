@@ -1,14 +1,14 @@
 <?php
 session_start();
-include "server/connection.php";
+include "../server/connection.php";
 $id = $_GET['id'];
-$email = $_POST['user_email'];
-$telp = $_POST['user_telp'];
-$password = $_POST['user_password'];
-$name = $_POST['user_name'];
+$name = $_POST['nama'];
+$umur = $_POST['umur'];
+$telp = $_POST['telp'];
+$kelamin = $_POST['kelamin'];
 
 $photo_name = rand(0, 9999) . str_replace(' ', '', $name) . ".jpg";
-$path = 'img/profil/' . $_SESSION['user_photo'];
+$path = 'images/users/' . $_SESSION['user_photo'];
 
 
 if (!empty($_FILES['photo']['tmp_name'])) {
@@ -21,7 +21,7 @@ if (!empty($_FILES['photo']['tmp_name'])) {
     $photo_name =  $_SESSION['user_photo'];
 }
 
-$query = "UPDATE akun SET email = '$email', name = '$name', telephone = '$telp' , photo = '$photo_name' WHERE id = '$id'";
+$query = "UPDATE akun SET name = '$name', umur = '$umur', telephone = '$telp', kelamin = '$kelamin', photo = '$photo_name' WHERE id = '$id'";
 mysqli_query($conn, $query);
-header("location:profil.php");
+header("location:../profil.php");
 die();
