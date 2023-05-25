@@ -9,6 +9,13 @@ include('layouts/header.php');
         <h1 class="mt-2">Enjoy the convenience of book search</h1>
         <p class="lead h3 ">Knowledge is contained within the pages, building new worlds in the imagination.</p>
         <button class="mt-5 ">Shop Now</button>
+
+        <div class="social-icon mt-5">
+            <h5 class="mb-2 lead">Books Corner Social</h5>
+            <a href=""><i class="fa-brands fa-github ms-2 c-10"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-10"></i></a>
+            <a href=""><i class="fa-brands fa-facebook ms-2 c-10"></i></a>
+        </div>
     </div>
 
 </section>

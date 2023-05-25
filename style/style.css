@@ -56,6 +56,22 @@ header li :hover {
 
 }
 
+.social-icon h5 {
+    margin-top: 10rem;
+}
+
+.social-icon a i {
+    margin-top: 1rem;
+    font-size: 40px;
+
+}
+
+.social-icon a i:hover {
+    scale: 1.2;
+    /* font-size: 50px; */
+
+}
+
 
 
 

@@ -37,10 +37,10 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link " aria-current="page" href="#">Buy</a>
+                            <a class="nav-link" aria-current="page" href="#">Shop</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link " aria-current="page" href="#aboutus">About Us</a>
+                            <a class="nav-link" aria-current="page" href="#aboutus">About Us</a>
                         </li>
                     </ul>
                 </div>
