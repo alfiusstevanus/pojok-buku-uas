@@ -23,7 +23,7 @@
             <div class="container">
                 <nav class="navbar">
                     <div class="container">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="index.php">
                             <img src="images/logo books corner 1.png" width="100" alt="">
                         </a>
                     </div>
@@ -37,7 +37,7 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link " aria-current="page" href="buku.php">Buy</a>
+                            <a class="nav-link " aria-current="page" href="buku.php">Books</a>
                         </li>
                         <li class="nav-item ps-5">
                             <a class="nav-link " aria-current="page" href="#aboutus">About Us</a>
