@@ -31,10 +31,12 @@ footer h3 {
 }
 
 header li :hover {
+
     transform: translate(0px, -3px);
 
 
 }
+
 
 .hero-label button {
     width: 200px;
@@ -49,6 +51,13 @@ header li :hover {
 
 }
 
+.hero-label button:hover {
+    color: #ED5006;
+    background-color: #f5f5f5;
+    scale: 1.02;
+
+}
+
 .hero-label {
     margin-left: 2rem;
     margin-top: 7rem;
@@ -56,8 +65,35 @@ header li :hover {
 
 }
 
+.social-icon h5 {
+    margin-top: 10rem;
+}
+
+.social-icon a i {
+    margin-top: 1rem;
+    font-size: 40px;
+
+}
+
+.social-icon a i:hover {
+    scale: 1.2;
+    /* font-size: 50px; */
+
+}
 
 
+.jumbo-right h6 {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbo-up h2 {
+
+    font-family: 'Poppins', sans-serif;
+}
+.jumbo-up p {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 
