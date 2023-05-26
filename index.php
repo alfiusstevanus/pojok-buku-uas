@@ -19,7 +19,7 @@ include('layouts/header.php');
 
 </section>
 <div class="bg-dark">
-    <img class="images-fluid " src="images/Hero1.jpg">
+    <img class="images-fluid " src="images/Hero2.jpg">
 </div>
 
 
