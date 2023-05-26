@@ -4,13 +4,18 @@
         <div class="row text-center">
             <div class="col-lg-4">
                 <div>
-                    <div class="mb-2">
-                        <a href=""><img src="images/logobookscorner.png" width="200" height="auto" alt="logo"></a>
+                    <div class="mb-2 text-center">
+                        <a href=""><img src="images/logo books corner 2.png" width="95" height="auto" alt="logo"></a>
                     </div>
 
                     <p class="ps-4" style="text-align: justify;">
-                        Books Corner is a website for buying and selling books. With a user-friendly interface, visitors can easily explore the collection of books available, ranging from fiction to non-fiction, classic to current literature, as well as various other genres....
-                        We build this website with love and to bring fellow book readers closer together.
+                    <div>
+                        <ul>
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="buku.php">SHOP</a></li>
+                            <li><a href="aboutus.php">ABOUT US</a></li>
+                        </ul>
+                    </div>
                     </p>
 
                 </div>
@@ -19,7 +24,7 @@
                 <div class="mx-5">
                     <ul>
                         <div class="mb-4">
-                            <h3>About Us:</h3>
+                            <h3>Developer Team</h3>
                         </div>
                         <li>Alfius Stevanus Ginting</li>
                         <li>Azzila Deswita Utami</li>

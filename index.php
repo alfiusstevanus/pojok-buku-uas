@@ -11,33 +11,34 @@ include('layouts/header.php');
 
         <div class="social-icon mt-5">
             <h5 class="mb-2 lead">Books Corner Social</h5>
-            <a href=""><i class="fa-brands fa-github ms-2 c-10"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-10"></i></a>
-            <a href=""><i class="fa-brands fa-facebook ms-2 c-10"></i></a>
+            <a href=""><i class="fa-brands fa-github ms-2 c-60"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-60"></i></a>
+            <a href=""><i class="fa-brands fa-facebook ms-2 c-60"></i></a>
         </div>
     </div>
 
 </section>
-<section>
-    <img class="images-fluid" src="images/Untitled-1.jpg">
-</section>
+<div class="bg-dark">
+    <img class="images-fluid " src="images/Hero1.jpg">
+</div>
+
 
 <!-- content PAGE -->
 
 <div class="container mt-3 mb-3">
     <div class="row p-2">
         <div class="col-md-3">
-            <div class="">
+            <div class="ads">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/download (4).jpeg.jpg" class="d-block w-100 " height="630px" alt="...">
+                            <img src="images/download (4).jpeg.jpg" class="d-block w-100 " class="img-fluid" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
+                            <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
+                            <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
