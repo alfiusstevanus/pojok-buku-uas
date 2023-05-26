@@ -52,7 +52,7 @@
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
                                     <li><a class="dropdown-item " href="#">Transaction</a></li>
-                                    <li><a class="dropdown-item  " href="#">Settings</a></li>
+                                    <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

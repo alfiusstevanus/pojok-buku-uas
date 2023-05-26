@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'server/connection.php';
-$id = $_GET['id'];
+$id = $_SESSION['id'];
 $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
