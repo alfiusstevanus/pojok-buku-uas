@@ -9,7 +9,7 @@ include('layouts/header.php');
         <div class="row p-2">
             <div class="col-md-12">
                 <div class="card text-bg-dark">
-                    <img src="images/pexels-huỳnh-đạt-2177482.jpg" class="card-img" height="600px" style="opacity: 0.35;" alt="...">
+                    <img src="images/pexels-huỳnh-đạt-2177482.jpg" class="card-img object-fit-cover" height="600px" style="opacity: 0.35;" alt="...">
                     <div class="card-aboutus card-img-overlay mt-5 pt-5 ">
                         <div class="text-center mb-3">
                             <img src="images/logo books cornmb-4 er 4. style=" border-radius:15px;"png" class="text-center" height="50px" alt="">
@@ -44,7 +44,7 @@ include('layouts/header.php');
                 <div class="row">
                     <div class="col-md-3 ">
                         <div>
-                            <img src="images/alfius.jpg" style="border-radius: 25px;" width="300px" height="400px" class="card-img-top" alt="...">
+                            <img src="images/alfius.jpg" style="border-radius: 25px;" width="300px" height="400px" class="card-img-top object-fit-cover" alt="...">
                             <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Alfius Stevanus ginting</p>
                                 <p class="card-text "><small>Founder</small></p>
@@ -53,7 +53,7 @@ include('layouts/header.php');
                     </div>
                     <div class="col-md-3 ">
                         <div>
-                            <img src="images/ramdhan.jpg" class="card-img-top " style="border-radius: 25px;" width="300px" height="400px" alt="...">
+                            <img src="images/ramdhan.jpg" class="card-img-top object-fit-cover" style="border-radius: 25px;" width="300px" height="400px" alt="...">
                             <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Ramdhan Mahfuzh</p>
                                 <p class="card-text "><small>Founder</small></p>
@@ -62,8 +62,8 @@ include('layouts/header.php');
                     </div>
                     <div class="col-md-3 ">
                         <div>
-                            <img src="images/azzila.jpg" class="card-img-top" style="border-radius: 25px;" width="300px" height="400px" alt="...">
-                            <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
+                            <img src="images/azzila.jpg" class="card-img-top object-fit-cover " style="border-radius: 25px;" width="300px" height="400px" alt="...">
+                            <div class="card-body p-2 bg-30 mb-4 mt-4 " style="border-radius:15px;">
                                 <p class="card-text">Azzila Deswita Utami</p>
                                 <p class="card-text "><small>Founder</small></p>
                             </div>
@@ -71,7 +71,7 @@ include('layouts/header.php');
                     </div>
                     <div class="col-md-3 ">
                         <div>
-                            <img src="images/salman.jpg" class="card-img-top" style="border-radius: 25px;" width="500px" height="400px" alt="...">
+                            <img src="images/salman.jpg" class="card-img-top object-fit-cover" style="border-radius: 25px;" width="500px" height="400px" alt="...">
                             <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Salman Alfaridzi</p>
                                 <p class="card-text "><small>founder</small></p>
