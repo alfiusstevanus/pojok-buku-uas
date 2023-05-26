@@ -45,36 +45,36 @@ include('layouts/header.php');
                     <div class="col-md-3 ">
                         <div>
                             <img src="images/alfius.jpg" style="border-radius: 25px;" width="300px" height="400px" class="card-img-top object-fit-cover" alt="...">
-                            <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
+                            <div class="card-body p-1 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Alfius Stevanus ginting</p>
-                                <p class="card-text "><small>Founder</small></p>
+                                <p class="card-text c-10"><small>Founder</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 ">
                         <div>
                             <img src="images/ramdhan.jpg" class="card-img-top object-fit-cover" style="border-radius: 25px;" width="300px" height="400px" alt="...">
-                            <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
+                            <div class="card-body p-1 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Ramdhan Mahfuzh</p>
-                                <p class="card-text "><small>Founder</small></p>
+                                <p class="card-text c-10 "><small>Founder</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 ">
                         <div>
                             <img src="images/azzila.jpg" class="card-img-top object-fit-cover " style="border-radius: 25px;" width="300px" height="400px" alt="...">
-                            <div class="card-body p-2 bg-30 mb-4 mt-4 " style="border-radius:15px;">
+                            <div class="card-body p-1 bg-30 mb-4 mt-4 " style="border-radius:15px;">
                                 <p class="card-text">Azzila Deswita Utami</p>
-                                <p class="card-text "><small>Founder</small></p>
+                                <p class="card-text c-10 "><small>Founder</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 ">
                         <div>
                             <img src="images/salman.jpg" class="card-img-top object-fit-cover" style="border-radius: 25px;" width="500px" height="400px" alt="...">
-                            <div class="card-body p-2 bg-30 mb-4 mt-4" style="border-radius:15px;">
+                            <div class="card-body p-1 bg-30 mb-4 mt-4" style="border-radius:15px;">
                                 <p class="card-text">Salman Alfaridzi</p>
-                                <p class="card-text "><small>founder</small></p>
+                                <p class="card-text c-10 "><small>founder</small></p>
                             </div>
                         </div>
                     </div>

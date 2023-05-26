@@ -11,9 +11,9 @@ include('layouts/header.php');
 
         <div class="social-icon mt-5">
             <h5 class="mb-2 lead">Books Corner Social</h5>
-            <a href=""><i class="fa-brands fa-github ms-2 c-60"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-60"></i></a>
-            <a href=""><i class="fa-brands fa-facebook ms-2 c-60"></i></a>
+            <a href=""><i class="fa-brands fa-square-github ms-2 c-60"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-60 "></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook ms-2 c-60"></i></a>
         </div>
     </div>
 
