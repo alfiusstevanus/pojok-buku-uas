@@ -24,8 +24,34 @@ include('layouts/header.php');
 
 
 <!-- content PAGE -->
+<div class="container mt-1 mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="justify-content-center">
+                <video class="ms-1 mt-5 pt-4 img-fluid " controls autoplay="true" width="700px"  loop="true">
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
 
-<div class="container mt-3 mb-3">
+        <div class="col-md-5 mt-5">
+            <div class="jumbotron bg-30">
+                <div class="card bg-dark text-white">
+                    <img src="images/12 Life-Changing Habits You Can Honestly Start Today.jpeg" style="opacity: 0.5;" width="400px" height="450px" class="card-img object-fit-cover" alt="...">
+                    <div class="card-img-overlay mt-5 ">
+                        <div class="align-items-center mt-5 pt-5">
+                            <h5 class="card-title text-center">Books & Train</h5>
+                            <p class="card-text text-center">its realy relax when you read on a train</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container mt-2 mb-3">
     <div class="row p-2">
         <div class="col-md-3">
             <div class="ads">
@@ -108,6 +134,7 @@ include('layouts/header.php');
         </div>
     </div>
 </div>
+
 
 
 <?php
