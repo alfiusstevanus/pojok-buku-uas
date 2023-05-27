@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'server/connection.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -60,10 +61,16 @@ include('layouts/header.php');
                                             <i class="fa-regular fa-star"></i>
                                         <?php } ?>
                                         <!-- random jumlah reviewers -->
-                                        <span> | <?= rand(50, 120) ?> Reviews</span>
+                                        <span> | <?= mt_rand(11, 120) ?> Reviews</span>
                                     </div>
                                     <div class="text-center">
-                                        <input type="submit" class="btn btn-primary bg-success border-0 py-2 px-5" value="CHECKOUT">
+                                        <input type="submit" class="btn btn-primary bg-success border-0 py-3 px-5 mb-2" value="BUY">
+                                        <span>
+                                            <a href="controller/add-cart.php?id_buku=<?= $row['id_buku'] ?>" class="bg-success border-0 py-3 px-3 c-60 rounded-2 ms-3">
+                                                <i role="button" class="fa-sharp fa-solid fa-cart-plus fa-xl">
+                                                </i>
+                                            </a>
+                                        </span>
                                     </div>
                                 </form>
 
