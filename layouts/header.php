@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/logo books corner 2.png">
-    <title>Books Corner | Home</title>
+    <title>Books Corner</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                             <a class="nav-link " aria-current="page" href="buku.php">Books</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link" aria-current="page" href="#aboutus">About Us</a>
+                            <a class="nav-link" aria-current="page" href="aboutus.php">About Us</a>
                         </li>
                     </ul>
                 </div>

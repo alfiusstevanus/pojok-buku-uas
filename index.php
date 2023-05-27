@@ -10,44 +10,72 @@ include('layouts/header.php');
 
         <div class="social-icon mt-5">
             <h5 class="mb-2 lead">Books Corner Social</h5>
-            <a href=""><i class="fa-brands fa-github ms-2 c-10"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-10"></i></a>
-            <a href=""><i class="fa-brands fa-facebook ms-2 c-10"></i></a>
+            <a href=""><i class="fa-brands fa-square-github ms-2 c-60"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram ms-2 c-60 "></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook ms-2 c-60"></i></a>
         </div>
     </div>
-    <img class="images-fluid" src="images/Untitled-1.jpg">
+
 </section>
+<div class="bg-dark">
+    <img class="images-fluid " src="images/Hero2.jpg">
+</div>
 
-<section class="container mt-5">
-    <div class="d-block mt-5">
-        <!-- content PAGE -->
 
-        <div class="container mt-3 mb-3">
-            <div class="row p-2">
-                <div class="col-md-3">
-                    <div class="">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/download (4).jpeg.jpg" class="d-block w-100 " height="630px" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" height="630px" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+<!-- content PAGE -->
+<div class="container mt-1 mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="justify-content-center">
+                <video class="ms-1 mt-5 pt-4 img-fluid " controls autoplay="true" width="700px"  loop="true">
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="col-md-5 mt-5">
+            <div class="jumbotron bg-30">
+                <div class="card bg-dark text-white">
+                    <img src="images/12 Life-Changing Habits You Can Honestly Start Today.jpeg" style="opacity: 0.5;" width="400px" height="450px" class="card-img object-fit-cover" alt="...">
+                    <div class="card-img-overlay mt-5 ">
+                        <div class="align-items-center mt-5 pt-5">
+                            <h5 class="card-title text-center">Books & Train</h5>
+                            <p class="card-text text-center">its realy relax when you read on a train</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container mt-2 mb-3">
+    <div class="row p-2">
+        <div class="col-md-3">
+            <div class="ads">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/download (4).jpeg.jpg" class="d-block w-100 " class="img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
 
                 </div>
                 <div class="col-md-9">
@@ -107,6 +135,8 @@ include('layouts/header.php');
         </div>
     </div>
 </section>
+
+
 
 
 <?php
