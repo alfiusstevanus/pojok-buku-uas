@@ -134,7 +134,6 @@ include('layouts/header.php');
             </div>
         </div>
     </div>
-</section>
 
 
 
