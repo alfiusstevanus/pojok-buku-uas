@@ -42,6 +42,10 @@ header li :hover {
 
 }
 
+select{
+    width: 250px;
+    
+}
 
 .hero-label button {
     width: 200px;

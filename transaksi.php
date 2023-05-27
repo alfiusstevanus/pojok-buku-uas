@@ -34,24 +34,30 @@ include('layouts/header.php');
                             <div class="product__details__text">
                                 <h4>RP. <?= number_format($row['harga']) ?></h4>
                                 <h4><?php echo $row['judul_buku']; ?></h4>
-                                <div class="rating mb-3">
-                                    <i class="fa fa-star c-10"></i>
-                                    <i class="fa fa-star c-10"></i>
-                                    <i class="fa fa-star c-10"></i>
-                                    <i class="fa fa-star c-10"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span> | <?= rand(50, 120) ?> Reviews</span>
-                                </div>
-                                <div class="quantity mb-5">
-                                    <div class="pro-qty">
-                                        <input type="number" size="10" value="1">
+                                <p>Stok: <?= $row['stok'] ?></p>
+                                <form action="controller/checkout.php?id_buku=<?= $row['id_buku'] ?>" method="post">
+                                    <div class="text-center">
+                                        <select class="my-3 text-center bg-30 py-1" name="jumlah">
+                                            <option value="0">Masukan jumlah Buku</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary bg-success border-0 py-2 px-5" role="button" href="transaksi.php?id=<?= $row['id_buku'] ?>">
-                                        CHECKOUT
-                                    </a>
-                                </div>
+                                    <div class="rating mb-3">
+                                        <i class="fa fa-star c-10"></i>
+                                        <i class="fa fa-star c-10"></i>
+                                        <i class="fa fa-star c-10"></i>
+                                        <i class="fa fa-star c-10"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <span> | <?= rand(50, 120) ?> Reviews</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit" class="btn btn-primary bg-success border-0 py-2 px-5" value="CHECKOUT">
+                                    </div>
+                                </form>
 
                                 <h5 class="mt-5 text-start">Sinopsis:</h5>
                                 <!-- <p><?php echo $row['product_description']; ?></p> -->
