@@ -1,29 +1,44 @@
-<?php include("server/conn.php");
+<?php
+include('server/conn.php');
 
-if (isset($_POST['btn_register'])) {
+if (isset($_POST['register'])) {
     $email = $_POST['email'];
-    $name = $_POST['name'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm-password'];
+    $name = $_POST['name'];
     $telephone = $_POST['telephone'];
-    $status = $_POST['status'];
-    $photo = $_POST['photo'];
+    $umur = $_POST['umur'];
+    $kelamin = $_POST['kelamin'];
+    $photo = str_replace('', '-', $name) . ".jpg";
 
-    if ($password == $confirm_password) {
-        $sql = "INSERT INTO akun (email, name, password, telephone, status, photo) VALUES ('$email', '$name', '$password', '$telephone', 'user', '$photo')";
-        $query = mysqli_query($conn, $sql);
-        if ($query) {
-            echo "<script>alert('Akun Berhasil dibuat')</script>";
-            echo "<script>window.location.href='login.php'</script>";
-        } else {
-            echo "<script>alert('Register Gagal')</script>";
-            echo "<script>window.location.href='register.php'</script>";
-        }
+    if (!empty($_FILES['photo']['tmp_name'])) {
+        $temp = $_FILES['photo']['tmp_name'];
+        move_uploaded_file($temp, "images/profile" . $photo);
     } else {
-        echo "<script>alert('Password Tidak Sama')</script>";
+        $photo = "default.jpg";
+    }
+
+    if (empty($email) || empty($password) || empty($name) || empty($telephone) || empty($umur) || empty($kelamin)) {
+        $success = false;
+        header("location:register.php?registered=$success");
+    } else {
+        $query = "INSERT INTO akun VALUES('','$email','$name','$password','$telephone','User','$photo','$kelamin','$umur',0)";
+        if (mysqli_query($conn, $query)) {
+            $success = true;
+            header("location:login.php?registered=$success");
+        } else {
+            $success = false;
+            header("location:register.php?registered=$success");
+        }
     }
 }
+
+
+
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,67 +47,110 @@ if (isset($_POST['btn_register'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <title>Register</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/logo books corner 2.png">
+    <title>Books Corner</title>
 </head>
-<div class="logo">
-    <img src="img/logo1.png">
-</div>
 
 <body>
-
-    <center>
-        <div class="register">
-            <div class="container">
-                <div class="top">
-                    <h2>Register</h2>
+    <!-- untuk Login -->
+    <div class="container d-flex justify-content-center align-items-center vh-100  ">
+        <div class="card shadow-lg card-register">
+            <div class="row g-3 ">
+                <div class="col-md-3">
+                    <div>
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="p-3 ">
+                                <label class="c-10" for="fullmane">Fullname</label>
+                                <input id="fullname" type="text" class="form-control" name="name" autocomplete="off">
+                            </div>
+                            <div class="p-3 ">
+                                <label class="c-10" for="email">Email</label>
+                                <input id="email" type="email" class="form-control" name="email" autocomplete="off">
+                            </div>
+                            <div class="p-3 ">
+                                <label class="c-10" for="password">Password</label>
+                                <input id="password" type="password" class="form-control" name="password">
+                            </div>
+                            <div class="p-3 ">
+                                <label class="c-10" for="photo">User Photo</label>
+                                <input id="photo" type="file" class="form-control" name="photo" autocomplete="off">
+                            </div>
+                    </div>
                 </div>
-                <div class="box">
-                    <form method="POST" action="register.php">
-                        <div class="input">
-                            <input type="text" class="Textbox" name="email" placeholder="Email" required>
+
+                <div class="col-md-3">
+
+                    <div class="p-3 ">
+                        <label class="c-10" for="telephone">Telephone</label>
+                        <input id="telephone" class="form-control" name="telephone" autocomplete="off">
+                    </div>
+                    <div class="p-2 ms-2 ">
+                        <label class="c-10" for="gender">Gender</label>
+                        <div class="form-check">
+                            <input name="kelamin" value="Laki-Laki" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Man
+                            </label>
                         </div>
-                        <div class="input">
-                            <input type="text" class="Textbox" name="name" placeholder="Name" required>
+                        <div class="form-check">
+                            <input name="kelamin" value="Perempuan" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Woman
+                            </label>
                         </div>
-                        <div class="input">
-                            <input type="password" class="Textbox" name="password" placeholder="Password" required>
-                        </div>
-                        <div class="input">
-                            <input type="password" class="Textbox" name="confirm-password" placeholder="Confirm Password" required>
-                        </div>
-                        <div class="input">
-                            <input type="text" class="Textbox" name="telephone" placeholder="telephone" required>
-                        </div>
-                        <div class="input">
-                            <input type="file" class="Textbox" name="photo" placeholder="photo" required>
-                        </div>
-                        <div class="Submit">
-                            <input type="submit" class="btn btn-primary" name="btn_register" value="Register">
-                        </div>
-                        <h5>Sudah Buat Akun? <a href="login.php">Login Disini</a></h5>
+                    </div>
+                    <div class="p-3 ">
+                        <label class="c-10" for="Age">Age</label>
+                        <input id="umur" type="number" class="form-control" name="umur" autocomplete="off">
+                    </div>
+
+                    <div class="p-2 m-3  text-center">
+                        <button name="register">
+                            register
+                        </button>
+                    </div>
+                    <div class="text-center justify-content-center d-flex flex-row">
+                        <p class="me-1">have account?</p>
+                        <a class="c-10" href="login.php">Login</a>
+                    </div>
                     </form>
                 </div>
+
+                <div class="col-md-6">
+                    <div class="overlaytext-register text-center">
+                        <h2 class="fw-bold">Register</h2>
+                        <p>To Get Your Account</p>
+                    </div>
+                    <img src="images/register.jpeg" class="object-cover-fit " width="100%" height="450px" alt="">
+                </div>
             </div>
+            <div>
+                <?php
+                if (isset($_GET["registered"]) && $_GET["registered"] == false) {
+                ?>
+                    <div id="alert" class="text-center alert alert-danger alert-dismissible fade show rounded-25 mt-2 shadow-lg " role="alert">
+                        Akun gagal dibuat !
+                    </div>
+                <?php }  ?>
+            </div>
+
         </div>
-    </center>
+    </div>
 </body>
-
-<style>
-    body {
-        background: url("img/609931bb5334c.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #fff;
-
-    }
-</style>
+<script src="/js/bootstrap.js"></script>
+<script>
+    // Menghilangkan alert setelah beberapa detik
+    setTimeout(function() {
+        document.getElementById('alert').style.display = 'none';
+    }, 1500); // ganti 5000 dengan jumlah milidetik yang diinginkan
+</script>
 
 </html>
