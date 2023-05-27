@@ -7,7 +7,7 @@ $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
 include('layouts/header.php');
 ?>
-<section class="changePassword">
+<section class="changePassword pt-5 pb-2">
     <div class="container mt-2">
         <div class="d-flex row justify-content-evenly p-5 rounded-3 shadow-lg">
             <h1 class="fs-2 mb-5 text-center">Change Password</h1>
