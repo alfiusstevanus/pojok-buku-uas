@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['id'] = 122;
 include 'server/connection.php';
 $id;
 // $q = "SELECT * FROM akun WHERE id = $id";
@@ -23,9 +25,22 @@ include('layouts/header.php');
                 <p><?= $row['telephone'] ?></p>
                 <h6>Jenis kelamin:</h6>
                 <p class=""><?= $row['kelamin'] ?></p>
-                <a class="btn btn-sm btn-primary bg-success border-0 py-2 mb-4" href="editProfil.php?id=<?= $row['id'] ?>" role="button">
+                <a class="btn btn-sm btn-primary bg-success border-0 py-2 mb-4" href="editProfil.php?" role="button">
                     Edit Akun
                 </a>
+                <?php
+                if (isset($_GET["changePW"]) && $_GET["changePW"] == true) {
+                ?>
+                    <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                        Password berhasil diupdate!
+                        <a href="profil.php" class="btn-close"></a>
+                    </div>
+                <?php } else if (isset($_GET["changePW"]) && $_GET["changePW"] == false) { ?>
+                    <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Gagal update Password!
+                        <a href="index.php" class="btn-close"></a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
