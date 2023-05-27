@@ -11,7 +11,7 @@ include('layouts/header.php');
 <section class="profil mt-5 mb-2">
     <div class="container mt-2">
         <div class="d-flex row justify-content-evenly bg-30 p-4 rounded-3 shadow-lg">
-            <h1 class="fs-2 mb-5 text-center">User Akun</h1>
+            <h1 class="fs-2 mb-5 text-center">Profil</h1>
             <div class="content col-md-4 mt-2 mb-3">
                 <img class="d-absolute rounded-circle m-20 py-4" src="images/users/justin.jpg" alt="<?= $row['name'] ?>.jpg" style="width: 250px;">
             </div>
@@ -37,7 +37,7 @@ include('layouts/header.php');
                 <?php } else if (isset($_GET["changePW"]) && $_GET["changePW"] == false) { ?>
                     <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
                         Gagal update Password!
-                        <a href="index.php" class="btn-close"></a>
+                        <a href="profil.php" class="btn-close"></a>
                     </div>
                 <?php } ?>
             </div>

@@ -39,7 +39,7 @@ include('layouts/header.php');
                                 <form action="controller/checkout.php?id_buku=<?= $row['id_buku'] ?>" method="post">
                                     <div class="text-center">
                                         <select class="my-3 text-center bg-60 py-1" name="jumlah">
-                                            <option value="0">Masukan jumlah Buku</option>
+                                            <option value="0">Jumlah Buku</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>

@@ -45,9 +45,11 @@ $subtotal = 0;
                     </tr>
                 <?php $subtotal += $row['total'];
                 endwhile ?>
-                <th colspan="6"></th>
-                <th>Total belanja saya:</th>
-                <th>Rp. <?= number_format($subtotal) ?></th>
+                <th colspan="5"></th>
+                <th colspan="3">
+                    <p class="fs-4">Total belanja saya: <span class="c-10">Rp. <?= number_format($subtotal) ?></span></p>
+                </th>
+                <th></th>
                 <th>&nbsp;</th>
             </table>
         </div>

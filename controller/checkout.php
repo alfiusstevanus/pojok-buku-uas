@@ -1,7 +1,7 @@
 <?php
 include('../server/connection.php');
 session_start();
-$id = $_SESSION['id'] = 252;
+$id = $_SESSION['id'] = 122;
 $id_buku = $_GET['id_buku'];
 $jumlah = $_POST['jumlah'];
 // $pw = $_POST['password'];
@@ -31,4 +31,4 @@ $conn->query($query1);
 $conn->query($query2);
 $conn->query($query3);
 
-// header("location: ../buku.php");
+header("location: ../buku.php");

@@ -22,15 +22,15 @@ include('layouts/header.php');
                     </div>
                     <div>
                         <p>Old Password:</p>
-                        <input type="password" name="oldPW1" class="form-control my-3" placeholder="Input Old Password" required>
-                    </div>
-                    <div>
-                        <p>Confirm Old Password:</p>
-                        <input type="password" name="oldPW2" class="form-control my-3" placeholder="Confirm Old Password" required>
+                        <input type="password" name="oldPW" class="form-control my-3" placeholder="Input Old Password" required>
                     </div>
                     <div>
                         <p>New Password:</p>
-                        <input type="password" name="newPw" class="form-control my-3" placeholder="Input New Password" required>
+                        <input type="password" name="newPW1" class="form-control my-3" placeholder="Input New Password" required>
+                    </div>
+                    <div>
+                        <p>Confirm New Password:</p>
+                        <input type="password" name="newPW2" class="form-control my-3" placeholder="Confirm New Password" required>
                     </div>
                     <div>
                         <input type="submit" class="btn btn-primary btn-success mt-3" name="up" value="Update Password">
