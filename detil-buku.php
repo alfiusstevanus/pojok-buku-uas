@@ -37,7 +37,7 @@ include('layouts/header.php');
                                 <p>Stok: <?= $row['stok'] ?></p>
                                 <form action="controller/checkout.php?id_buku=<?= $row['id_buku'] ?>" method="post">
                                     <div class="text-center">
-                                        <select class="my-3 text-center bg-30 py-1" name="jumlah">
+                                        <select class="my-3 text-center bg-60 py-1" name="jumlah">
                                             <option value="0">Masukan jumlah Buku</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -50,8 +50,16 @@ include('layouts/header.php');
                                         <i class="fa fa-star c-10"></i>
                                         <i class="fa fa-star c-10"></i>
                                         <i class="fa fa-star c-10"></i>
-                                        <i class="fa fa-star c-10"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <!-- random rating buku -->
+                                        <?php
+                                        if (mt_rand(0, 1) == 1) { ?>
+                                            <i class="fa fa-star c-10"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        <?php } else { ?>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        <?php } ?>
+                                        <!-- random jumlah reviewers -->
                                         <span> | <?= rand(50, 120) ?> Reviews</span>
                                     </div>
                                     <div class="text-center">
@@ -67,7 +75,7 @@ include('layouts/header.php');
                                 <div class="row">
                                     <?php while ($row = mysqli_fetch_assoc($r)) : ?>
                                         <div class="col-lg-3">
-                                            <a class="text-dark" style="text-decoration: none;" href="transaksi.php?id=<?= $row['id_buku'] ?>">
+                                            <a class="text-dark" style="text-decoration: none;" href="detil-buku.php?id=<?= $row['id_buku'] ?>">
                                                 <div class="bg-60 py-3 px-auto rounded-4 scale" data-bs-toggle="modal" data-bs-target="#infoSkill<?= $row['id'] ?>">
                                                     <div class="row justify-content-center align-items-center">
                                                         <div class="text-center">
@@ -80,7 +88,7 @@ include('layouts/header.php');
                                                             <h6 class="text-center border-0 pt-1 pb-1 fw-light">Rp. <?= number_format($row['harga']) ?></h6>
                                                         </div>
                                                         <!-- <div>
-                                                        <a class="btn btn-primary bg-success border-0 py-2 px-4 mb-1 text-center" role="button" href="transaksi.php?id=<?= $row['id_buku'] ?>">
+                                                        <a class="btn btn-primary bg-success border-0 py-2 px-4 mb-1 text-center" role="button" href="detil-buku.php?id=<?= $row['id_buku'] ?>">
                                                             Beli
                                                         </a>
                                                     </div> -->

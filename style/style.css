@@ -43,10 +43,12 @@ header li :hover {
 }
 
 select{
-    width: 250px;
-    
+    width: 250px;    
 }
 
+.media-body a h5:hover{
+    color: #ED5006;
+}
 .hero-label button {
     width: 200px;
     height: 50px;

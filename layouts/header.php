@@ -51,7 +51,7 @@
                                 <a class="nav-link active ms-5 " type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"><i class="fa-solid fa-user c-10"></i></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
-                                    <li><a class="dropdown-item " href="#">Transaction</a></li>
+                                    <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
                                     <li><a class="dropdown-item " href="saldo.php">Saldo</a></li>
                                     <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>
                                     <li>

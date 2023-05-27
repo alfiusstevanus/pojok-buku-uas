@@ -1,8 +1,7 @@
 <?php
 session_start();
-$_SESSION['id'] = 122;
+$id = $_SESSION['id'] = 122;
 include 'server/connection.php';
-$id;
 // $q = "SELECT * FROM akun WHERE id = $id";
 $q = "SELECT * FROM akun WHERE id = 122";
 $result = mysqli_query($conn, $q);
