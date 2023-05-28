@@ -5,6 +5,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    background-color: #f5f5f5;
 }
 
 * {
@@ -74,9 +75,10 @@ select{
     margin-left: 1.5rem;
     margin-top: 7rem;
     position: absolute;
-   
+
 }
-.hero-label h1{
+
+.hero-label h1 {
 
     font-family: 'Poppins', sans-serif;
 
@@ -121,6 +123,70 @@ select{
     font-family: 'Poppins', sans-serif;
 }
 
+.card-login {
+    background-color: #E1D9CD !important;
+}
+
+.card-login button {
+    color: #f5f5f5;
+    background-color: #ED5006 !important;
+    width: 200px;
+    height: 50px;
+    border: #ED5006;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: auto;
+}
+
+.card-login label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.overlaytext {
+    margin-left: 7rem;
+    margin-top: 9rem;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+}
+
+.card-register {
+    background-color: #E1D9CD !important;
+}
+
+
+.card-register button {
+    color: #f5f5f5;
+    background-color: #ED5006 !important;
+    width: 200px;
+    height: 50px;
+    border: #ED5006;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: auto;
+}
+
+.card-register button {
+    color: #f5f5f5;
+    background-color: #ED5006 !important;
+    width: 150px;
+    height: 50px;
+    border: #ED5006;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: auto;
+}
+
+.overlaytext-register {
+    margin-left: 10rem;
+    margin-top: 11rem;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+}
 
 
 
