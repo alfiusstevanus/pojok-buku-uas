@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'server/connection.php';
-$id = $_SESSION['id'] = 122;
+$id = $_SESSION['id'];
 $query = "SELECT buku.id_buku, id_transaksi, date, buku.judul_buku,
 buku.harga, jumlah, total, status FROM transaksi JOIN buku ON
 transaksi.id_buku = buku.id_buku WHERE transaksi.id = $id";

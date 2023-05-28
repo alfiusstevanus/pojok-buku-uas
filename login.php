@@ -1,8 +1,14 @@
 <?php
-include('server/conn.php');
+session_start();
+include('server/connection.php');
 if (isset($_SESSION['logged_in'])) {
-    header('location:index.php');
-    exit;
+    if ($_SESSION['status'] == 'Admin') {
+        header('location: admin/index.php');
+        exit;
+    } else if ($_SESSION['status'] == 'User') {
+        header('location: index.php');
+        exit;
+    }
 }
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
@@ -44,7 +50,7 @@ if (isset($_POST['login'])) {
             if ($_SESSION['status'] == "User") {
                 header("location:index.php?login=1");
             } else if ($_SESSION['status'] == "Admin") {
-                header("location:admin.php?login=1");
+                header("location:admin/index.php?login=1");
             } else {
                 $succes = false;
                 header("location:login.php?error=email atau password salah!?logined=$success");
@@ -92,11 +98,11 @@ if (isset($_POST['login'])) {
                         <form method="post">
                             <div class="p-4 ">
                                 <label class="c-10" for="email">Email</label>
-                                <input id="email" type="email" class="form-control" name="email" autocomplete="off">
+                                <input id="email" type="email" class="form-control" name="email" autocomplete="off" required>
                             </div>
                             <div class="p-4 ">
                                 <label class="c-10" for="password">Password</label>
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="password" required>
                             </div>
                             <div class="p-3 m-3 text-center">
                                 <button name="login">

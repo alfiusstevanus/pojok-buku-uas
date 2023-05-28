@@ -1,7 +1,8 @@
 <?php
-include('../server/connection.php');
 session_start();
-$id = $_SESSION['id'] = 122;
+include('../server/connection.php');
+
+$id = $_SESSION['id'];
 $id_buku = $_GET['id_buku'];
 $jumlah = $_POST['jumlah'];
 // $pw = $_POST['password'];

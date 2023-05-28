@@ -1,19 +1,16 @@
 <?php
 session_start();
-
-include('layouts/header.php');
+if (!empty($_SESSION['cart'])) {
+    include('layouts/header.php');
 ?>
-<section class="cart mt-5 mb-2">
-    <div class="container mt-3 ">
-        <div class="div d-flex row justify-content-center p-5 rounded-3 shadow-lg">
-            <div class="d-flex row align-items-center">
-                <div class="col-md-4 ">
-                    <h1 class="fs-1 welcoming py-4">Cart</h1>
+    <section class="cart mt-5 mb-2">
+        <div class="container mt-3 ">
+            <div class="div d-flex row justify-content-center p-5 rounded-3 shadow-lg">
+                <div class="d-flex row align-items-center">
+                    <div class="col-md-4 ">
+                        <h1 class="fs-1 welcoming py-4">Cart</h1>
+                    </div>
                 </div>
-            </div>
-            <?php
-            if (!empty($_SESSION['cart'])) {
-            ?>
                 <table class="table" border="1">
                     <tr>
                         <th class="col-1 text-center">ID Buku</th>
@@ -57,14 +54,14 @@ include('layouts/header.php');
                     </th>
                     <th>&nbsp;</th>
                 </table>
-            <?php
-            } else {
-                header('location:buku.php');
-            }
-            ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php
+} else {
+    header('location:buku.php');
+}
+?>
 <?php
 include('layouts/footer.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('server/connection.php');
 
 $book_id = $_GET['book_id'];

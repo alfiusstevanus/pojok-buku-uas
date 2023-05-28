@@ -1,19 +1,10 @@
 <?php
-include('server/conn.php');
-
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
     exit;
 }
 
-if (isset($_GET['logout'])) {
-    if (isset($_SESSION['logged_in'])) {
-        unset($_SESSION['logged_in']);
-        unset($_SESSION['email']);
-        header('location:login.php');
-        exit;
-    }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +87,7 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button onclick="window.location.href='index.php?logout=1'" type="button" class="btn btn-danger">logout</button>
+                    <a href="index.php?logout=1" type=" button" class="btn btn-danger">logout</a>
                 </div>
             </div>
         </div>

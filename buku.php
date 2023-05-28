@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'server/connection.php';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
