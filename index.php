@@ -1,8 +1,16 @@
 <?php
+session_start();
+if (isset($_GET['logout'])) {
+    if (isset($_SESSION['logged_in'])) {
+        unset($_SESSION['logged_in']);
+        unset($_SESSION['email']);
+        header('location:login.php');
+        exit;
+    }
+}
 include('layouts/header.php');
 ?>
 <section class="hero">
-
     <div class="hero-label justify-content-center">
         <h4 class="h4 mb-4">SPRING - DISCOUNT</h4>
         <h1 class="mt-2">Enjoy the convenience of book search</h1>
@@ -28,7 +36,7 @@ include('layouts/header.php');
     <div class="row justify-content-center">
         <div class="col-md-7">
             <div class="justify-content-center">
-                <video class="ms-1 mt-5 pt-4 img-fluid " controls autoplay="true" width="700px"  loop="true">
+                <video class="ms-1 mt-5 pt-4 img-fluid " controls autoplay="true" width="700px" loop="true">
                     <source src="media/video.mp4" type="video/mp4">
                 </video>
             </div>
@@ -88,13 +96,17 @@ include('layouts/header.php');
                 <ul class="list-unstyled">
                     <li class="media">
                         <div class="media-body">
-                            <h5 class="mt-0 mb-1">Hero: The Life and Legend of Lawrence of Arabia</h5>
+                            <a class="text-dark" style="text-decoration: none;" href="detil-buku.php?id=596">
+                                <h5 class="mt-0 mb-1">Hero: The Life and Legend of Lawrence of Arabia</h5>
+                            </a>
                             <p>From Michael Korda, author of the New York Times bestselling Eisenhower biography Ike and the captivating Battle of Britain book With Wings Like Eagles, comes the critically-acclaimed definitive biography of T. E. Lawrence—the legendary British soldier, strategist, scholar, and adventurer whose exploits as “Lawrence of Arabia” created a legacy of mythic proportions in his own lifetime. Many know T.E. Lawrence from David Lean’s Oscar-winning 1962 biopic—based, itself, upon Lawrence’s autobiographical Seven Pillars of Wisdom—but in the tradition of modern biographers like John Meacham, David McCullough, and Barbara Leaming, Michael Korda’s penetrating new examination reveals new depth and character in the twentieth century’s quintessential English hero.</p>
                         </div>
                     </li>
                     <li class="media my-4">
                         <div class="media-body">
-                            <h5 class="mt-0 mb-1">Quarter Life Crisis</h5>
+                            <a class="text-dark" style="text-decoration: none;" href="detil-buku.php?id=958">
+                                <h5 class="mt-0 mb-1">Quarter Life Crisis</h5>
+                            </a>
                             <p>Anxious and confused about the future? Can't decide on a career? Choosing the right partner? Idealism or reality? What do you want to do after graduation?</p>
                             <p>Language
                                 : Indonesian,
@@ -109,7 +121,9 @@ include('layouts/header.php');
                     </li>
                     <li class="media">
                         <div class="media-body">
-                            <h5 class="mt-0 mb-1">Harry Potter and the Philosopher's Stone</h5>
+                            <a class="text-dark" style="text-decoration: none;" href="detil-buku.php?id=825">
+                                <h5 class="mt-0 mb-1">Harry Potter and the Philosopher's Stone</h5>
+                            </a>
                             <p>Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.</p>
                         </div>
                     </li>
@@ -134,6 +148,8 @@ include('layouts/header.php');
         </div>
     </div>
 </div>
+</div>
+
 
 
 

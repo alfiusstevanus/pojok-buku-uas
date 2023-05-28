@@ -1,10 +1,8 @@
 <?php
+session_start();
 include('layouts/header.php');
 ?>
-
-
 <section>
-
     <div class="container mt-4">
         <div class="row p-2">
             <div class="col-md-12">

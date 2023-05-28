@@ -4,14 +4,7 @@ if (!isset($_SESSION['logged_in'])) {
     exit;
 }
 
-if (isset($_GET['logout'])) {
-    if (isset($_SESSION['logged_in'])) {
-        unset($_SESSION['logged_in']);
-        unset($_SESSION['email']);
-        header('location:login.php');
-        exit;
-    }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +32,7 @@ if (isset($_GET['logout'])) {
             <div class="container">
                 <nav class="navbar">
                     <div class="container">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="index.php">
                             <img src="images/logo books corner 1.png" width="100" alt="">
                         </a>
                     </div>
@@ -53,7 +46,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link" aria-current="page" href="#">Shop</a>
+                            <a class="nav-link " aria-current="page" href="buku.php">Books</a>
                         </li>
                         <li class="nav-item ps-5">
                             <a class="nav-link" aria-current="page" href="aboutus.php">About Us</a>
@@ -66,9 +59,10 @@ if (isset($_GET['logout'])) {
                             <div class="dropdown">
                                 <a class="nav-link active ms-5 " type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"><i class="fa-solid fa-user c-10"></i></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
-                                    <li><a class="dropdown-item " href="#">Profile</a></li>
-                                    <li><a class="dropdown-item " href="#">Transaction</a></li>
-                                    <li><a class="dropdown-item  " href="#">Settings</a></li>
+                                    <li><a class="dropdown-item " href="profil.php">Profile</a></li>
+                                    <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
+                                    <li><a class="dropdown-item " href="saldo.php">Saldo</a></li>
+                                    <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -94,10 +88,10 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button onclick="window.location.href='index.php?logout=1'" type="button" class="btn btn-danger">logout</button>
+                    <a href="index.php?logout=1" type=" button" class="btn btn-danger">logout</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- akhir dari modal logout -->
-    <main>
+    <main class="mb-5">

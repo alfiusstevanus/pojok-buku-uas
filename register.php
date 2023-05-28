@@ -1,5 +1,6 @@
 <?php
-include('server/conn.php');
+
+include('server/connection.php');
 
 if (isset($_POST['register'])) {
     $email = $_POST['email'];
@@ -31,12 +32,6 @@ if (isset($_POST['register'])) {
         }
     }
 }
-
-
-
-
-
-
 ?>
 
 
@@ -69,19 +64,19 @@ if (isset($_POST['register'])) {
                         <form method="post" enctype="multipart/form-data">
                             <div class="p-3 ">
                                 <label class="c-10" for="fullmane">Fullname</label>
-                                <input id="fullname" type="text" class="form-control" name="name" autocomplete="off">
+                                <input id="fullname" type="text" class="form-control" name="name" autocomplete="off" required>
                             </div>
                             <div class="p-3 ">
                                 <label class="c-10" for="email">Email</label>
-                                <input id="email" type="email" class="form-control" name="email" autocomplete="off">
+                                <input id="email" type="email" class="form-control" name="email" autocomplete="off" required>
                             </div>
                             <div class="p-3 ">
                                 <label class="c-10" for="password">Password</label>
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="password" required>
                             </div>
                             <div class="p-3 ">
                                 <label class="c-10" for="photo">User Photo</label>
-                                <input id="photo" type="file" class="form-control" name="photo" autocomplete="off">
+                                <input id="photo" type="file" class="form-control" name="photo" autocomplete="off" required>
                             </div>
                     </div>
                 </div>
