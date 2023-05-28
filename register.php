@@ -8,11 +8,11 @@ if (isset($_POST['register'])) {
     $telephone = $_POST['telephone'];
     $umur = $_POST['umur'];
     $kelamin = $_POST['kelamin'];
-    $photo = str_replace('', '-', $name) . ".jpg";
+    $photo = str_replace(' ', '-', $name) . ".jpg";
 
     if (!empty($_FILES['photo']['tmp_name'])) {
         $temp = $_FILES['photo']['tmp_name'];
-        move_uploaded_file($temp, "images/profile" . $photo);
+        move_uploaded_file($temp, "images/profile/" . $photo);
     } else {
         $photo = "default.jpg";
     }
