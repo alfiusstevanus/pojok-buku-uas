@@ -37,8 +37,8 @@ if (isset($_POST['login'])) {
             $stmt_login->fetch();
 
             $_SESSION['id'] = $id;
-            $_SESSION['email'] = $user_name;
-            $_SESSION['name'] = $status;
+            $_SESSION['email'] = $email;
+            $_SESSION['name'] = $name;
             $_SESSION['password'] = $password;
             $_SESSION['telephone'] = $telephone;
             $_SESSION['status'] = $status;

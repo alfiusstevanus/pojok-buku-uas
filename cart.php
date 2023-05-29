@@ -27,21 +27,21 @@ if (!empty($_SESSION['cart'])) {
                         $subtotal = $val["harga"] * 1;
                     ?>
                         <tr>
-                            <td> <input type="text" class="form-control text-center my-3" value="<?php echo $val["id_buku"] ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= $val["id_buku"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="<?php echo $val["judul"] ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= $val["judul"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="<?php echo $val["penerbit"] ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= $val["penerbit"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="<?php echo $val["penulis"] ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= $val["penulis"] ?>" readonly>
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($val['harga']) ?>" readonly>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-success my-3 text-center" href="detil-buku.php?id=<?php echo $val["id_buku"] ?>" role="button">Beli</a>
+                                <a class="btn btn-success my-3 text-center" href="detil-buku.php?id=<?= $val["id_buku"] ?>" role="button">Beli</a>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-danger my-3 text-center" href="controller/hapus-cart.php?id=<?php echo $cart ?>" role="button">Hapus</a>
+                                <a class="btn btn-danger my-3 text-center" href="controller/hapus-cart.php?id=<?= $cart ?>" role="button">Hapus</a>
                             </td>
                         </tr>
                     <?php

@@ -25,19 +25,19 @@ $subtotal = 0;
                 </tr>
                 <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                     <tr>
-                        <td> <input type="text" name="id_transaksi" class="form-control text-center my-3" value="<?php echo $row["id_transaksi"] ?>" readonly>
+                        <td> <input type="text" name="id_transaksi" class="form-control text-center my-3" value="<?= $row["id_transaksi"] ?>" readonly>
                         </td>
-                        <td> <input type="text" name="date" class="form-control text-center my-3" value="<?php echo date("d F Y", strtotime($row['date'])); ?>" readonly>
+                        <td> <input type="text" name="date" class="form-control text-center my-3" value="<?= date("d F Y", strtotime($row['date'])); ?>" readonly>
                         </td>
-                        <td> <input type="text" name="judul_buku" class="form-control text-center my-3" value="<?php echo $row["judul_buku"] ?>" readonly>
+                        <td> <input type="text" name="judul_buku" class="form-control text-center my-3" value="<?= $row["judul_buku"] ?>" readonly>
                         </td>
                         <td> <input type="text" name="harga" class="form-control text-center my-3" value="Rp. <?= number_format($row['harga']) ?>" readonly>
                         </td>
-                        <td> <input type="text" name="jumlah" class="form-control text-center my-3" value="<?php echo $row["jumlah"] ?>" readonly>
+                        <td> <input type="text" name="jumlah" class="form-control text-center my-3" value="<?= $row["jumlah"] ?>" readonly>
                         </td>
                         <td> <input type="text" name="total" class="form-control text-center my-3" value="Rp. <?= number_format($row['total']) ?>" readonly>
                         </td>
-                        <td> <input type="text" name="status" class="form-control text-center my-3" value="<?php echo $row["status"] ?>" readonly>
+                        <td> <input type="text" name="status" class="form-control text-center my-3" value="<?= $row["status"] ?>" readonly>
                         </td>
                         <td>
                             <a class="btn btn-success my-3" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Beli Lagi</a>

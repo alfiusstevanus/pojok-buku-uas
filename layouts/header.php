@@ -86,7 +86,7 @@ if ($_SESSION['status'] == 'Admin') {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>you will exit this session and login again, Are you sure you want to log out? </p>
+                    <p>You will exit this session and login again, Are you sure you want to Log out? </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
