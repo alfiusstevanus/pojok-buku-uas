@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+include 'server/connection.php';
+$id = $_SESSION['id'];
+$q = "SELECT * FROM akun WHERE id = $id";
+$result = mysqli_query($conn, $q);
+$row = mysqli_fetch_assoc($result);
+$_SESSION['photo'] = $row['photo'];
+
 if (isset($_GET['logout'])) {
     if (isset($_SESSION['logged_in'])) {
         unset($_SESSION['logged_in']);
@@ -8,6 +16,10 @@ if (isset($_GET['logout'])) {
         exit;
     }
 }
+
+$index = 'text-dark';
+$about = 'text-secondary';
+$book = 'text-secondary';
 include('layouts/header.php');
 ?>
 <section class="hero">

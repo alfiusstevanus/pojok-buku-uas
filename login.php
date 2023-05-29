@@ -52,7 +52,7 @@ if (isset($_POST['login'])) {
             } else if ($_SESSION['status'] == "Admin") {
                 header("location:admin/index.php?login=1");
             } else {
-                $succes = false;
+                $success = false;
                 header("location:login.php?error=email atau password salah!?logined=$success");
             }
         } else {

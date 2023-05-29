@@ -1,4 +1,10 @@
 <?php
+include 'server/connection.php';
+$id = $_SESSION['id'];
+$q = "SELECT * FROM akun WHERE id = $id";
+$result = mysqli_query($conn, $q);
+$row = mysqli_fetch_assoc($result);
+$_SESSION['photo'] = $row['photo'];
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
     exit;
@@ -43,13 +49,13 @@ if (!isset($_SESSION['logged_in'])) {
                 <div class="collapse navbar-collapse justify-content-center mx-auto ps-5 " id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item ps-5">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link <?= $index ?>" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link " aria-current="page" href="buku.php">Books</a>
+                            <a class="nav-link  <?= $book ?>" aria-current="page" href="buku.php">Books</a>
                         </li>
                         <li class="nav-item ps-5">
-                            <a class="nav-link" aria-current="page" href="aboutus.php">About Us</a>
+                            <a class="nav-link  <?= $about ?>" aria-current="page" href="aboutus.php">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -57,11 +63,12 @@ if (!isset($_SESSION['logged_in'])) {
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <div class="dropdown">
-                                <a class="nav-link active ms-5 " type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"><i class="fa-solid fa-user c-10"></i></a>
+                                <a class="nav-link active ms-5 " type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"><img src="images/profile/<?php echo $row['photo']; ?>" alt="" class="object-fit-cover
+                                rounded-circle " width="45px" height="45px"></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
                                     <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
-                                    <li><a class="dropdown-item " href="saldo.php">Saldo</a></li>
+                                    <li><a class="dropdown-item " href="saldo.php">Balance</a></li>
                                     <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>
                                     <li>
                                         <hr class="dropdown-divider">

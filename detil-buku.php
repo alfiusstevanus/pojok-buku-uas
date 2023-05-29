@@ -1,6 +1,6 @@
 <?php
-session_start();
 include 'server/connection.php';
+session_start();
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
