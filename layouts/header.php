@@ -9,7 +9,10 @@ if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
     exit;
 }
-
+if ($_SESSION['status'] == 'Admin') {
+    header('location: admin/index.php');
+    exit;
+}
 
 ?>
 

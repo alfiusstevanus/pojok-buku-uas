@@ -33,6 +33,7 @@ include('layouts/header.php');
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <div class="product__details__text">
+
                                 <h4>RP. <?= number_format($row['harga']) ?></h4>
                                 <h4><?php echo $row['judul_buku']; ?></h4>
                                 <p>Stok: <?= $row['stok'] ?></p>
@@ -72,6 +73,15 @@ include('layouts/header.php');
                                             </a>
                                         </span>
                                     </div>
+                                    <br>
+                                    <!-- alert message! -->
+                                    <?php if (isset($_GET['message'])) { ?>
+                                        <div id="alert" class="alert alert-secondary alert-dismissible fade show mb-5 " role="alert">
+                                            <?= $_GET['message'] ?>
+                                            <a href="detil-buku.php?id=<?= $id ?>" class="btn-close"></a>
+                                        </div>
+                                    <?php } ?>
+                                    <!-- alert message! -->
                                 </form>
 
                                 <h5 class="mt-5 text-start">Sinopsis:</h5>

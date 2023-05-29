@@ -24,19 +24,14 @@ include('layouts/header.php');
                 <a class="btn btn-sm btn-primary bg-success border-0 py-2 px-2 mb-0 mt-5" role="button" data-bs-toggle="modal" data-bs-target="#tambahSaldo">
                     <h6>Top Up</h6>
                 </a>
-                <?php
-                if (isset($_GET["changePW"]) && $_GET["changePW"] == true) {
-                ?>
-                    <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
-                        Password berhasil diupdate!
-                        <a href="profil.php" class="btn-close"></a>
-                    </div>
-                <?php } else if (isset($_GET["changePW"]) && $_GET["changePW"] == false) { ?>
-                    <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Gagal update Password!
-                        <a href="index.php" class="btn-close"></a>
+                <!-- alert message! -->
+                <?php if (isset($_GET['message'])) { ?>
+                    <div id="alert" class="alert alert-secondary alert-dismissible fade show mt-5" role="alert">
+                        <?= $_GET['message'] ?>
+                        <a href="saldo.php" class="btn-close"></a>
                     </div>
                 <?php } ?>
+                <!-- alert message! -->
             </div>
         </div>
     </div>
@@ -59,7 +54,25 @@ include('layouts/header.php');
                                 <option value="200000">RP. 200,000</option>
                                 <option value="500000">RP. 500,000</option>
                             </select>
-                            <input type="submit" class="btn btn-primary btn-success mt-3" value="Top UP">
+                            <a data-bs-toggle="modal" data-bs-target="#password" role="button" class="btn btn-primary btn-success">Top UP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="password" tabindex="-1" aria-labelledby="passwordLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content info-skill">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordLabel">Masukan Password:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>Masukan Password Anda:</p>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="submit" class="btn btn-primary btn-success mt-3" value="Top UP">
                         </form>
                     </div>
                 </div>

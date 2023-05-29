@@ -6,21 +6,30 @@ $id = $_SESSION['id'];
 $id_buku = $_GET['id_buku'];
 $jumlah = $_POST['jumlah'];
 // $pw = $_POST['password'];
-$q = "Select * from buku WHERE id_buku = $id_buku";
-$r = mysqli_query($conn, $q);
+$q1 = "Select * from buku WHERE id_buku = $id_buku";
+$q2 = "SELECT saldo from akun where id = $id";
+$r = mysqli_query($conn, $q1);
+$r2 = mysqli_query($conn, $q2);
 $row = mysqli_fetch_assoc($r);
+$row2 = mysqli_fetch_assoc($r2);
 $harga = $row['harga'];
+$saldo = $row2['saldo'];
 $total = $jumlah * $harga;
 $date = date("Y-m-d");
+
+echo $saldo;
 if ($jumlah > 0) {
-    $status = 'Success';
+    $status = 'Pending';
+    $ket = 'Buku berhasil di Checkout!';
+    if ($saldo < $total) {
+        $status = 'Canceled';
+        $ket = 'Saldo Anda kurang!';
+        $total = 0;
+        $jumlah = 0;
+    }
 } else {
     $status = 'Canceled';
-}
-if (!$r) {
-    die(mysqli_error($conn));
-} else {
-    $r = mysqli_fetch_assoc($r);
+    $ket = 'Masukan jumlah Buku!';
 }
 
 $query1 = "INSERT INTO transaksi VALUES
@@ -32,4 +41,4 @@ $conn->query($query1);
 $conn->query($query2);
 $conn->query($query3);
 
-header("location: ../buku.php");
+header("location: ../detil-buku.php?id=$id_buku&message=$ket");

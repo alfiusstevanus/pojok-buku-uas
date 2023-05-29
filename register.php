@@ -1,35 +1,13 @@
 <?php
-
+session_start();
 include('server/connection.php');
-
-if (isset($_POST['register'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $name = $_POST['name'];
-    $telephone = $_POST['telephone'];
-    $umur = $_POST['umur'];
-    $kelamin = $_POST['kelamin'];
-    $photo = str_replace(' ', '-', $name) . ".jpg";
-
-    if (!empty($_FILES['photo']['tmp_name'])) {
-        $temp = $_FILES['photo']['tmp_name'];
-        move_uploaded_file($temp, "images/profile/" . $photo);
-    } else {
-        $photo = "default.jpg";
-    }
-
-    if (empty($email) || empty($password) || empty($name) || empty($telephone) || empty($umur) || empty($kelamin)) {
-        $success = false;
-        header("location:register.php?registered=$success");
-    } else {
-        $query = "INSERT INTO akun VALUES('','$email','$name','$password','$telephone','User','$photo','$kelamin','$umur',0)";
-        if (mysqli_query($conn, $query)) {
-            $success = true;
-            header("location:login.php?registered=$success");
-        } else {
-            $success = false;
-            header("location:register.php?registered=$success");
-        }
+if (isset($_SESSION['logged_in'])) {
+    if ($_SESSION['status'] == 'Admin') {
+        header('location: admin/index.php');
+        exit;
+    } else if ($_SESSION['status'] == 'User') {
+        header('location: index.php');
+        exit;
     }
 }
 ?>
@@ -61,7 +39,7 @@ if (isset($_POST['register'])) {
             <div class="row g-3 ">
                 <div class="col-md-3">
                     <div>
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="post" enctype="multipart/form-data" action="controller/register.php">
                             <div class="p-3 ">
                                 <label class="c-10" for="fullmane">Fullname</label>
                                 <input id="fullname" type="text" class="form-control" name="name" autocomplete="off" required>
@@ -76,7 +54,7 @@ if (isset($_POST['register'])) {
                             </div>
                             <div class="p-3 ">
                                 <label class="c-10" for="photo">User Photo</label>
-                                <input id="photo" type="file" class="form-control" name="photo" autocomplete="off" required>
+                                <input id="photo" type="file" class="form-control" name="photo" autocomplete="off">
                             </div>
                     </div>
                 </div>
@@ -85,19 +63,19 @@ if (isset($_POST['register'])) {
 
                     <div class="p-3 ">
                         <label class="c-10" for="telephone">Telephone</label>
-                        <input id="telephone" class="form-control" name="telephone" autocomplete="off">
+                        <input id="telephone" class="form-control" name="telephone" autocomplete="off" required>
                     </div>
                     <div class="p-2 ms-2 ">
-                        <label class="c-10" for="gender">Gender</label>
+                        <label class="c-10">Gender</label>
                         <div class="form-check">
-                            <input name="kelamin" value="Laki-Laki" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            <input name="kelamin" value="Laki - laki" class="form-check-input" type="radio" name="flexRadioDefault" id="man" required>
+                            <label class="form-check-label" for="man">
                                 Man
                             </label>
                         </div>
                         <div class="form-check">
-                            <input name="kelamin" value="Perempuan" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
+                            <input name="kelamin" value="Perempuan" class="form-check-input" type="radio" name="flexRadioDefault" id="woman" required>
+                            <label class="form-check-label" for="woman">
                                 Woman
                             </label>
                         </div>
@@ -106,7 +84,10 @@ if (isset($_POST['register'])) {
                         <label class="c-10" for="Age">Age</label>
                         <input id="umur" type="number" class="form-control" name="umur" autocomplete="off">
                     </div>
-
+                    <div class="p-3 ">
+                        <label class="c-10" for="alamat">Alamat</label>
+                        <input id="alamat" type="text" class="form-control" name="alamat" autocomplete="off">
+                    </div>
                     <div class="p-2 m-3  text-center">
                         <button name="register">
                             register

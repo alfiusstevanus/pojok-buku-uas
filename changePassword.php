@@ -12,7 +12,7 @@ include('layouts/header.php');
         <div class="d-flex row justify-content-evenly p-5 rounded-3 shadow-lg">
             <h1 class="fs-2 mb-5 text-center">Change Password</h1>
             <div class="content col-md-4 mt-2 mb-3">
-                <img class="d-absolute rounded-circle m-20 py-4" src="images/users/justin.jpg" alt="<?= $row['name'] ?>.jpg" style="width: 300px;">
+                <img class="d-absolute rounded-circle m-20 py-4" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['name'] ?>.jpg" style="width: 300px;">
             </div>
             <div class="content col-md-6 fs-5">
                 <form method="post" action="controller/changePassword.php?id=<?= $row['id'] ?>">
