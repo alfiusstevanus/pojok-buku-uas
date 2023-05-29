@@ -2,7 +2,6 @@
 session_start();
 $id = $_SESSION['id'];
 include 'server/connection.php';
-// $q = "SELECT * FROM akun WHERE id = $id";
 $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
@@ -12,8 +11,8 @@ include('layouts/header.php');
     <div class="container mt-2">
         <div class="d-flex row justify-content-evenly bg-30 p-4 rounded-3 shadow-lg">
             <h1 class="fs-2 mb-5 text-center">Profil</h1>
-            <div class="content col-md-4 mt-2 mb-3">
-                <img class="d-absolute rounded-circle m-20 py-4" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['name'] ?>.jpg" style="width: 250px;">
+            <div class="content col-md-4 mt-5 mb-3">
+                <img class="d-absolute rounded-circle object-fit-cover ms-5" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['name'] ?>.jpg" width="250px" height="250px">
             </div>
             <div class="content col-md-4 mt-4">
                 <h6>Nama:</h6>
@@ -22,6 +21,8 @@ include('layouts/header.php');
                 <p><?= $row['umur'] ?></p>
                 <h6>No. Telp:</h6>
                 <p><?= $row['telephone'] ?></p>
+                <h6>Alamat:</h6>
+                <p><?= $row['alamat'] ?></p>
                 <h6>Jenis kelamin:</h6>
                 <p class=""><?= $row['kelamin'] ?></p>
                 <a class="btn btn-sm btn-primary bg-success border-0 py-2 mb-4" href="editProfil.php?" role="button">

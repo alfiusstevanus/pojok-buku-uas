@@ -29,6 +29,7 @@ if (isset($_POST['login'])) {
             $kelamin,
             $umur,
             $saldo,
+            $alamat
         );
 
         $stmt_login->store_result();
@@ -45,6 +46,7 @@ if (isset($_POST['login'])) {
             $_SESSION['kelamin'] = $kelamin;
             $_SESSION['umur'] = $umur;
             $_SESSION['saldo'] = $saldo;
+            $_SESSION['alamat'] = $alamat;
             $_SESSION['logged_in'] = true;
 
             if ($_SESSION['status'] == "User") {
