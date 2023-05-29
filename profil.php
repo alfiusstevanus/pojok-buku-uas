@@ -12,7 +12,7 @@ include('layouts/header.php');
         <div class="d-flex row justify-content-evenly bg-30 p-4 rounded-3 shadow-lg">
             <h1 class="fs-2 mb-5 text-center">Profil</h1>
             <div class="content col-md-4 mt-5 mb-3">
-                <img class="d-absolute rounded-circle object-fit-cover ms-5" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['name'] ?>.jpg" width="250px" height="250px">
+                <img class="d-absolute rounded-circle object-fit-cover ms-5" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['photo'] ?>" width="250px" height="250px">
             </div>
             <div class="content col-md-4 mt-4">
                 <h6>Nama:</h6>

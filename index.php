@@ -10,8 +10,8 @@ if (isset($_GET['logout'])) {
 }
 include('layouts/header.php');
 ?>
-<section class="hero">
-    <div class="hero-label justify-content-center">
+<section class="hero ms-5">
+    <div class="hero-label justify-content-center ms-5">
         <h4 class="h4 mb-4">SPRING - DISCOUNT</h4>
         <h1 class="mt-2">Enjoy the convenience of book search</h1>
         <p class="lead h3 ">Knowledge is contained within the pages, building new worlds in the imagination.</p>
