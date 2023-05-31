@@ -5,6 +5,7 @@ include('../server/connection.php');
 $id = $_SESSION['id'];
 $id_buku = $_GET['id_buku'];
 $jumlah = $_POST['jumlah'];
+$alamat = $_POST['alamat'];
 // $pw = $_POST['password'];
 $q1 = "Select * from buku WHERE id_buku = $id_buku";
 $q2 = "SELECT saldo, password from akun where id = $id";
@@ -36,7 +37,7 @@ if (($password == $passwordDB) && ($stok >= $jumlah)) {
     }
 
     $query1 = "INSERT INTO transaksi VALUES
-(null, $id_buku, $id, '$date', $jumlah, $harga,$total,'$status')";
+(null, $id_buku, $id, '$date', $jumlah, $harga,$total,'$status','$alamat')";
     $query2 = "UPDATE buku set stok = stok - $jumlah WHERE id_buku = $id_buku";
     $query3 = "UPDATE akun set saldo = saldo - $total WHERE id = $id";
 
