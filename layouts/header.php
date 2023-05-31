@@ -76,7 +76,7 @@ if ($_SESSION['status'] == 'Admin') {
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#logout">Logout</a></li>
+                                    <li><a class="dropdown-item text-danger pointer-cursor" data-bs-toggle="modal" data-bs-target="#logout">Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -98,7 +98,7 @@ if ($_SESSION['status'] == 'Admin') {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a href="index.php?logout=1" type=" button" class="btn btn-danger">logout</a>
+                    <a href="index.php?logout=1" type=" button" class="btn btn-danger pointer-cursor">logout</a>
                 </div>
             </div>
         </div>

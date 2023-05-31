@@ -1,3 +1,17 @@
+<?php
+$namaFile = basename($_SERVER['PHP_SELF']);
+include '../server/connection.php';
+session_start();
+if ($_SESSION['status'] == 'User') {
+    header('location: ../index.php');
+    exit;
+}
+
+$query = "SELECT COUNT(*) AS total_user FROM akun WHERE status = 'User'";
+$result = $conn->query($query);
+$row_user = mysqli_fetch_assoc($result);
+$total_user = $row_user['total_user'];
+?>
 <!Doctype HTML>
 <html>
 
@@ -10,20 +24,16 @@
 
 
 <body>
+    <!-- start of sidebar -->
+    <?php include 'layout/sidebar.php' ?>
+    <!-- end of sidebar -->
 
-    <div id="mySidenav" class="sidenav">
-        <p class="logo c-10"><span><img src="../images/logo books corner 2.png" class="object-fit-cover"  height="100px" alt=""></span> Admin</p>
-        <a href="index.php" class="icon-a"><i class="fa fa-dashboard icons"></i> Dashboard</a>
-        <a href="customer.php" class="icon-a click"><i class="fa fa-users icons"></i> Customers</a>
-        <a href="book.php" class="icon-a"><i class="fa fa-book icons"></i> Books</a>
-        <a href="orders.php" class="icon-a"><i class="fa fa-shopping-bag icons"></i> Orders</a>
-    </div>
     <div id="main">
 
         <div class="head">
             <div class="col-div-6">
                 <span style="font-size:30px;cursor:pointer;" class="nav c-10">☰ Customers</span>
-               
+
             </div>
 
             <div class="clearfix"></div>
@@ -34,17 +44,19 @@
 
         <div class="col-div-3">
             <div class="box">
-                <p>67<br /><span>Customers</span></p>
+                <p><?= $total_user ?><br /><span>Customers</span></p>
                 <i class="fa fa-users box-icon"></i>
             </div>
         </div>
         <div class="clearfix"></div>
         <br /><br />
         <div class="col-div-8">
+            <!-- main-content start-->
             <div class="box-8">
                 <div class="content-box">
                 </div>
             </div>
+            <!-- main-content end-->
         </div>
 
 
@@ -52,10 +64,12 @@
     </div>
 
 
-   
+
 
 
 </body>
 
+<script src="js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap.js"></script>
 
 </html>

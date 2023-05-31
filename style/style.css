@@ -102,7 +102,9 @@ select{
 .no-resize{
     resize: none;
 }
-
+.pointer-cursor{
+    cursor: pointer;
+}
 
 .jumbo-right h6 {
     font-size: 16px;

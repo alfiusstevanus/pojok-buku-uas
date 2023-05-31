@@ -13,7 +13,6 @@ $result = mysqli_query($conn, $query);
         <div class="d-flex row align-items-center">
             <div class="col-md-4 d-flex flex-inline">
                 <h1 class="fs-2 welcoming py-5">Book Corner List</h1>
-                <!-- <input type="text" class="form-control h-120" placeholder="search book by name e.g Perahu kertas"> -->
             </div>
         </div>
         <div class="row">

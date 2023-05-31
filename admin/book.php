@@ -1,3 +1,17 @@
+<?php
+$namaFile = basename($_SERVER['PHP_SELF']);
+include '../server/connection.php';
+session_start();
+if ($_SESSION['status'] == 'User') {
+    header('location: ../index.php');
+    exit;
+}
+
+$query = "SELECT COUNT(*) AS total_buku FROM buku";
+$result = $conn->query($query);
+$row_buku = mysqli_fetch_assoc($result);
+$total_buku = $row_buku['total_buku'];
+?>
 <!Doctype HTML>
 <html>
 
@@ -10,20 +24,15 @@
 
 
 <body>
-
-    <div id="mySidenav" class="sidenav">
-        <p class="logo c-10"><span><img src="../images/logo books corner 2.png" class="object-fit-cover" height="100px" alt=""></span> Admin</p>
-        <a href="index.php" class="icon-a"><i class="fa fa-dashboard icons"></i> Dashboard</a>
-        <a href="customer.php" class="icon-a"><i class="fa fa-users icons"></i> Customers</a>
-        <a href="book.php" class="icon-a click"><i class="fa-solid fa-book"></i> Books</a>
-        <a href="orders.php" class="icon-a"><i class="fa fa-shopping-bag icons"></i> Orders</a>
-    </div>
+    <!-- start of sidebar -->
+    <?php include 'layout/sidebar.php' ?>
+    <!-- end of sidebar -->
     <div id="main">
 
         <div class="head">
             <div class="col-div-6">
-                <span style="font-size:30px;cursor:pointer; "  class="nav c-10">☰ Books</span>
-             
+                <span style="font-size:30px;cursor:pointer; " class="nav c-10">☰ Books</span>
+
             </div>
 
             <div class="clearfix"></div>
@@ -35,7 +44,7 @@
 
         <div class="col-div-3">
             <div class="box">
-                <p>88<br /><span>Total Books</span></p>
+                <p><?= $total_buku ?><br /><span>Total Books</span></p>
                 <i class="fa fa-book box-icon"></i>
             </div>
         </div>
@@ -43,11 +52,13 @@
         <div class="clearfix"></div>
         <br /><br />
         <div class="col-div-8">
+            <!-- main-content start-->
             <div class="box-8">
                 <div class="content-box">
-                    
+
                 </div>
             </div>
+            <!-- main-content end-->
         </div>
 
 
@@ -55,9 +66,10 @@
     </div>
 
 
-    
+
 
 </body>
-
+<script src="js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap.js"></script>
 
 </html>
