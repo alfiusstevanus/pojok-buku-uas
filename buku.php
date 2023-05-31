@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'server/connection.php';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
@@ -26,8 +27,8 @@ $result = mysqli_query($conn, $query);
                                 <h5 class="text-center border-0 pt-2 pb-2 fw-light">Rp. <?= number_format($row['harga']) ?></h5>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <a class="btn btn-secondary bg-10 border-0 py-2 px-4" style="" role="button" href="transaksi.php?id=<?= $row['id_buku'] ?>">
-                                    Beli
+                                <a class="btn btn-secondary bg-10 border-0 py-2 px-4" style="" role="button" href="detil-buku.php?id=<?= $row['id_buku'] ?>">
+                                    Buy
                                 </a>
                             </div>
                             <!-- <div class="col-lg-4 mt-3">

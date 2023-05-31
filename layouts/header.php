@@ -1,3 +1,14 @@
+<?php
+if (!isset($_SESSION['logged_in'])) {
+    header('location: login.php');
+    exit;
+}
+if ($_SESSION['status'] == 'Admin') {
+    header('location: admin/index.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,19 +55,20 @@
                         </li>
                     </ul>
                 </div>
-                <div class=" collapse navbar-collapse justify-content-end " id="navbarNav">
+                <div class=" collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <div class="dropdown">
                                 <a class="nav-link active ms-5 " type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#"><i class="fa-solid fa-user c-10"></i></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
-                                    <li><a class="dropdown-item " href="#">Transaction</a></li>
+                                    <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
+                                    <li><a class="dropdown-item " href="saldo.php">Saldo</a></li>
                                     <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                                    <li><a class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#logout">Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -65,4 +77,23 @@
             </div>
         </nav>
     </header>
+    <!-- modal logout -->
+    <div class="modal fade z-index-9" id="logout" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You will exit this session and login again, Are you sure you want to Log out? </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="index.php?logout=1" type=" button" class="btn btn-danger">logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- akhir dari modal logout -->
     <main class="mb-5">

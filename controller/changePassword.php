@@ -8,13 +8,13 @@ if (!$r) {
 } else {
     $row = mysqli_fetch_assoc($r);
 }
-$oldpW1 = $_POST['oldPW1'];
-$oldpW2 = $_POST['oldPW2'];
-$newpW = $_POST['newPw'];
+$oldpW = $_POST['oldPW'];
+$newpW1 = $_POST['newPW1'];
+$newpW2 = $_POST['newPW2'];
 
 
-if ($oldpW1 == $oldpW2 && $oldpW2 == $row['password']) {
-    $query = "UPDATE akun SET password = '$newpW' WHERE id = $id";
+if ($oldpW == $row['password'] && $newpW1 == $newpW2) {
+    $query = "UPDATE akun SET password = '$newpW1' WHERE id = $id";
     mysqli_query($conn, $query);
     $status = 1;
 } else {
