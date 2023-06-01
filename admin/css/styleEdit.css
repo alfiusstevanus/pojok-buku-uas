@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .formbold-input-flex > div {
+    width: 50%;
+  }
+
+  .formbold-input-flex-judul{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .formbold-form-label-harga{
+    width: 25%;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074D;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder {
+    color: #536387;
+  }
+  .formbold-form-input:focus {
+    border-color: #ED5006;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  input[type=file] {
+     width: 550px;
+     padding: 13px 22px;
+     border-radius: 5px;
+     border: 1px solid #DDE3EC;
+     background: #FFFFFF;
+     font-weight: 500;
+     font-size: 16px;
+     color: #07074D;
+     outline: none;
+     resize: none;
+     color: #07074D;
+     margin-bottom: 10px;}
+
+  .formbold-form-label {
+    color: #07074D;
+    font-size: 17px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .formbold-form-label-stok{
+    width: 70%;
+    color: #07074D;
+    font-size: 17px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .formbold-btn {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #ED5006;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {  
+  
+     opacity: 1;
+  
+  }
