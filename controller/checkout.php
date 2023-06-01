@@ -23,7 +23,7 @@ $date = date("Y-m-d");
 
 if (($password == $passwordDB) && ($stok >= $jumlah)) {
     if ($jumlah > 0) {
-        $status = 'Pending';
+        $status = 'In Progress';
         $ket = 'Buku berhasil di Checkout!';
         if ($saldo < $total) {
             $status = 'Canceled';

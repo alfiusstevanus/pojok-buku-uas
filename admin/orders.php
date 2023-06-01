@@ -113,9 +113,38 @@ $result3 = mysqli_query($conn, $query3);
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row["status"] ?>" readonly>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-secondary my-3 text-center" role=" button">Proses</a>
+                                <?php if ($row['status'] == 'In Progress') { ?>
+                                    <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#editStatus<?= $row['id_transaksi'] ?>" role=" button">Proses</a>
+                                <?php } ?>
                             </td>
                         </tr>
+                        <div class="modal fade" id="editStatus<?= $row['id_transaksi'] ?>" tabindex="-1" aria-labelledby="editStatusLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editStatusLabel">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="controller/updateStatus.php?id=<?= $row['id_transaksi'] ?>" enctype="multipart/form-data">
+                                            <div class="container">
+                                                <div>
+                                                    <h5>Status:</h5>
+                                                    <select class="mb-3 text-center bg-60 py-1" name="newStatus" required>
+                                                        <option value="">Change Status</option>
+                                                        <option value="Shipped">Shipped</option>
+                                                    </select>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger mt-3" data-bs-dismiss="modal">Cancel</button>
+                                                    <input type="submit" class="btn btn-success mt-3" value="Change">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <?php endwhile ?>
                 </table>
             </div>

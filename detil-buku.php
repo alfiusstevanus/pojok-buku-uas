@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
     <div class="container bg-30 p-5 rounded-3 shadow-lg">
         <?php while ($row = mysqli_fetch_assoc($result)) : ?>
             <div class="text-center p-5">
-                <img class="rounded-4 shadow-lg object-fit-cover" height="300px"  src="images/books/<?= $row['cover_buku'] ?>">
+                <img class="rounded-4 shadow-lg object-fit-cover" height="300px" src="images/books/<?= $row['cover_buku'] ?>">
             </div>
 
             <div class="product_details_content">
@@ -104,11 +104,6 @@ if (isset($_GET['id'])) {
                                                         <div>
                                                             <h6 class="text-center border-0 pt-1 pb-1 fw-light">Rp. <?= number_format($row['harga']) ?></h6>
                                                         </div>
-                                                        <!-- <div>
-                                                        <a class="btn btn-primary bg-success border-0 py-2 px-4 mb-1 text-center" role="button" href="detil-buku.php?id=<?= $row['id_buku'] ?>">
-                                                            Beli
-                                                        </a>
-                                                    </div> -->
                                                     </div>
                                                 </div>
                                             </a>
