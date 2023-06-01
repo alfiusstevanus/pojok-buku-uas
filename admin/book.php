@@ -53,7 +53,7 @@ $result2 = mysqli_query($conn, $query2);
             </a>
         </div>
         <div class="col-div-1">
-            <a href="addBook.php">
+            <a href data-bs-toggle="modal" data-bs-target="#addBook">
                 <div class="box rounded-4">
                     <p><span>Add</span></p>
                     <i class="fa-solid fa-plus box-income"></i>
@@ -110,28 +110,138 @@ $result2 = mysqli_query($conn, $query2);
                             <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($row['harga']) ?>" readonly>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#deleteUser<?= $row['id'] ?>" role="button">Manage</a>
+                                <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#manageBook<?= $row['id_buku'] ?>" role="button">Manage</a>
                             </td>
                         </tr>
-                        <div class="modal fade" id="deleteUser<?= $row['id'] ?>" tabindex="-1" aria-labelledby="deleteUserLabel" aria-hidden="true">
+                        <div class="modal fade" id="manageBook<?= $row['id_buku'] ?>" tabindex="-1" aria-labelledby="manageBookLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteUserLabel">Delete User!</h5>
+                                        <h5 class="modal-title" id="manageBookLabel">Manage Book!</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Anda yakin ingin menghapus Akun "<?= $row['name'] ?>" secara Permanen?</h5>
+                                        <h5>Choose the operation!</h5>
+                                        <a data-bs-toggle="modal" data-bs-target="#updateBook<?= $row['id_buku'] ?>" role="submit" class="btn btn-success mt-3">Update</a>
+                                        <a role="submit" class="btn btn-danger mt-3" href="controller/deleteBook.php?id=<?= $row['id_buku'] ?>">Delete</a>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
-                                        <a role="submit" class="btn btn-danger btn-success mt-3" href="controller/deleteUser.php?id=<?= $row['id'] ?>">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="updateBook<?= $row['id_buku'] ?>" tabindex="-1" aria-labelledby="updateBookLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="updateBookLabel">Update Book!</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="controller/actionUpdateBook.php?id=<?= $row['id_buku'] ?>" enctype="multipart/form-data">
+                                            <div class="container row">
+                                                <div class="col-lg-6">
+                                                    <div>
+                                                        <h5>Judul Buku:</h5>
+                                                        <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Penulis:</h5>
+                                                        <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Penerbit:</h5>
+                                                        <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Tahun Terbit:</h5>
+                                                        <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Edit Cover:</h5>
+                                                        <input type="file" name="image" class="form-control my-3">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div>
+                                                        <h5>Harga:</h5>
+                                                        <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Stok:</h5>
+                                                        <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Sinopsis:</h5>
+                                                        <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9"><?= $row['sinopsis'] ?></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
+                                                    <input type="submit" class="btn btn-primary btn-success mt-3" value="Update">
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     <?php endwhile ?>
                 </table>
+            </div>
+            <div class="modal fade" id="addBook" tabindex="-1" aria-labelledby="addBookLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addBookLabel">Add Book!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="controller/actionAddBook.php" enctype="multipart/form-data">
+                                <div class="container row">
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <h5>Judul Buku:</h5>
+                                            <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required placeholder="Judul">
+                                        </div>
+                                        <div>
+                                            <h5>Penulis:</h5>
+                                            <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required placeholder="Penulis">
+                                        </div>
+                                        <div>
+                                            <h5>Penerbit:</h5>
+                                            <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required placeholder="Penerbit">
+                                        </div>
+                                        <div>
+                                            <h5>Tahun Terbit:</h5>
+                                            <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required placeholder="Tahun Terbit">
+                                        </div>
+                                        <div>
+                                            <h5>Cover Buku:</h5>
+                                            <input type="file" name="image" class="form-control my-3" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <h5>Harga:</h5>
+                                            <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required placeholder="Harga">
+                                        </div>
+                                        <div>
+                                            <h5>Stok:</h5>
+                                            <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Stok">
+                                        </div>
+                                        <div>
+                                            <h5>Sinopsis:</h5>
+                                            <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9" placeholder="Sinopsis"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
+                                        <input type="submit" class="btn btn-primary btn-success mt-3" value="Add">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- main-content end-->
         </div>
