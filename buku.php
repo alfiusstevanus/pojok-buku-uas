@@ -1,5 +1,8 @@
 <?php
 session_start();
+$index = 'text-secondary';
+$about = 'text-secondary';
+$book = 'text-dark';
 include 'server/connection.php';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
@@ -8,17 +11,17 @@ $result = mysqli_query($conn, $query);
 <section>
     <div class="container">
         <div class="d-flex row align-items-center">
-            <div class="col-md-4 ">
+            <div class="col-md-4 d-flex flex-inline">
                 <h1 class="fs-2 welcoming py-5">Book Corner List</h1>
             </div>
         </div>
         <div class="row">
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <div class=" col-lg-3">
-                    <div class=" mb-4 bg-30 p-3 rounded-4 scale" data-bs-toggle="modal" data-bs-target="#infoSkill<?= $row['id'] ?>">
+                    <div class=" mb-4 bg-30 p-3 rounded-4 scale">
                         <div class="row justify-content-center align-items-center">
                             <div class="text-center">
-                                <img src="images/books/<?= $row['cover_buku'] ?>" class="rounded-4" width="149px" height="215px" alt="<?= $row['cover_buku'] ?>">
+                                <img src="images/books/<?= $row['cover_buku'] ?>" class="rounded-4 object-fit-cover" width="149px" height="215px" alt="<?= $row['cover_buku'] ?>">
                             </div>
                             <div>
                                 <h5 class="text-center border-0 fw-semibold pt-3"><?= $row['judul_buku'] ?></h5>
@@ -31,11 +34,6 @@ $result = mysqli_query($conn, $query);
                                     Buy
                                 </a>
                             </div>
-                            <!-- <div class="col-lg-4 mt-3">
-                                <a class="btn btn-primary bg-danger border-0 py-3" role="button" data-bs-toggle="modal" data-bs-target="#deleteSkill<?= $row['id'] ?>">
-                                    Delete
-                                </a>
-                            </div> -->
                         </div>
                     </div>
                 </div>

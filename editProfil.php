@@ -18,32 +18,32 @@ include('layouts/header.php');
             <div class="content col-md-6 fs-5">
                 <form method="post" action="controller/updateUser.php?id=<?= $row['id'] ?>" enctype="multipart/form-data">
                     <div>
-                        <p>Nama:</p>
+                        <p>Name:</p>
                         <input type="text" name="nama" class="form-control my-3" value="<?= $row['name'] ?>" required>
                     </div>
                     <div>
-                        <p>Umur:</p>
+                        <p>Age:</p>
                         <input type="text" name="umur" class="form-control my-3" value="<?= $row['umur'] ?>" required>
                     </div>
                     <div>
-                        <p>No. Telp:</p>
+                        <p>Telp:</p>
                         <input type="text" name="telp" class="form-control my-3" value="<?= $row['telephone'] ?>" required>
                     </div>
                     <div>
-                        <p>Jenis Kelamin:</p>
+                        <p>Age:</p>
                         <label class="form-check-label form-control my-3">
                             <input type="radio" name="kelamin" value="Laki - laki" required <?php
                                                                                             if ($row['kelamin'] == 'Laki - laki') {
                                                                                                 echo 'checked';
                                                                                             }
-                                                                                            ?>> Laki-laki
+                                                                                            ?>> Man
                         </label>
                         <label class="form-check-label form-control my-3">
                             <input type="radio" name="kelamin" value="Perempuan" required <?php
                                                                                             if ($row['kelamin'] == 'Perempuan') {
                                                                                                 echo 'checked';
                                                                                             }
-                                                                                            ?>> Perempuan
+                                                                                            ?>> Woman
                         </label>
                     </div>
                     <div>

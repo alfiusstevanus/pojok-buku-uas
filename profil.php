@@ -14,19 +14,19 @@ include('layouts/header.php');
             <div class="content col-md-4 mt-5 mb-3">
                 <img class="d-absolute rounded-circle object-fit-cover ms-5" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['photo'] ?>" width="250px" height="250px">
             </div>
-            <div class="content col-md-4 mt-4">
-                <h6>Nama:</h6>
+            <div class="content col-md-4 mt-5 profile-label">
+                <h6 class="mb-2">Name:</h6>
                 <p><?= $row['name'] ?></p>
-                <h6>Umur:</h6>
+                <h6 class="mb-2">Age:</h6>
                 <p><?= $row['umur'] ?></p>
-                <h6>No. Telp:</h6>
+                <h6 class="mb-2">Telp:</h6>
                 <p><?= $row['telephone'] ?></p>
                 <h6>Alamat:</h6>
                 <p><?= $row['alamat'] ?></p>
                 <h6>Jenis kelamin:</h6>
                 <p class=""><?= $row['kelamin'] ?></p>
                 <a class="btn btn-sm btn-primary bg-success border-0 py-2 mb-4" href="editProfil.php?" role="button">
-                    Edit Akun
+                    Edit Profile
                 </a>
                 <?php
                 if (isset($_GET["changePW"]) && $_GET["changePW"] == true) {

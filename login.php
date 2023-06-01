@@ -50,11 +50,11 @@ if (isset($_POST['login'])) {
             $_SESSION['logged_in'] = true;
 
             if ($_SESSION['status'] == "User") {
-                header("location:index.php?login=1");
+                header("location:index.php");
             } else if ($_SESSION['status'] == "Admin") {
-                header("location:admin/index.php?login=1");
+                header("location:admin/index.php");
             } else {
-                $succes = false;
+                $success = false;
                 header("location:login.php?error=email atau password salah!?logined=$success");
             }
         } else {

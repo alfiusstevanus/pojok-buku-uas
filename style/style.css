@@ -36,12 +36,12 @@ footer h3 {
     color: black;
 }
 
-header li :hover {
+/* header li :hover {
 
     transform: translate(0px, -3px);
 
 
-}
+} */
 
 select{
     width: 250px;    
@@ -102,7 +102,9 @@ select{
 .no-resize{
     resize: none;
 }
-
+.pointer-cursor{
+    cursor: pointer;
+}
 
 .jumbo-right h6 {
     font-size: 16px;
@@ -191,8 +193,25 @@ select{
     color: #f5f5f5;
 }
 
+.profile-label {
+    font-family: 'Poppins', sans-serif;
+}
 
+.profile-label h6{
+   color: #ED5006;
+}
 
+/* .overlaytextsaldo{
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: 10rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-topup{
+    margin-top: 17rem;
+    margin-left: 13rem;
+} */
 /* untuk kebutuhan color dari palette */
 
 .c-10 {

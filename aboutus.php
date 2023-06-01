@@ -1,5 +1,8 @@
 <?php
 session_start();
+$index = 'text-secondary';
+$about = 'text-dark';
+$book = 'text-secondary';
 include('layouts/header.php');
 ?>
 <section>
