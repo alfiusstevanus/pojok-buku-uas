@@ -11,7 +11,7 @@ $query = "SELECT COUNT(*) AS total_buku FROM buku";
 $result = $conn->query($query);
 $row_buku = mysqli_fetch_assoc($result);
 $total_buku = $row_buku['total_buku'];
-$query2 = "SELECT * FROM buku";
+$query2 = "SELECT * FROM buku ORDER BY tahun_terbit DESC";
 $result2 = mysqli_query($conn, $query2);
 ?>
 <!Doctype HTML>

@@ -93,7 +93,7 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="bg-30 h-65 pt-4">Status</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4"></div>
+                            <div class="bg-30 h-65 pt-4">Action</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result3)) : ?>
@@ -115,6 +115,10 @@ $result3 = mysqli_query($conn, $query3);
                             <td class="text-center">
                                 <?php if ($row['status'] == 'In Progress') { ?>
                                     <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#editStatus<?= $row['id_transaksi'] ?>" role=" button">Proses</a>
+                                <?php } else if ($row['status'] == 'Canceled') { ?>
+                                    <a class="btn btn-danger my-3 text-center" data-bs-toggle="modal" data-bs-target="#deleteTransaksi<?= $row['id_transaksi'] ?>" role=" button">Delete</a>
+                                <?php } else if ($row['status'] == 'Shipped') { ?>
+                                    <p class="text-center mt-4 c-10">shipped!</p>
                                 <?php } ?>
                             </td>
                         </tr>
@@ -126,7 +130,7 @@ $result3 = mysqli_query($conn, $query3);
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="post" action="controller/updateStatus.php?id=<?= $row['id_transaksi'] ?>" enctype="multipart/form-data">
+                                        <form method="post" action="controller/updateStatus.php?id=<?= $row['id_transaksi'] ?>">
                                             <div class="container">
                                                 <div>
                                                     <h5>Status:</h5>
@@ -141,6 +145,27 @@ $result3 = mysqli_query($conn, $query3);
                                                 </div>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="deleteTransaksi<?= $row['id_transaksi'] ?>" tabindex="-1" aria-labelledby="deleteTransaksi" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteTransaksi">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div>
+                                                <h5>Anda yakin ingin menghapus Transaksi ini?</h5>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Cancel</button>
+                                                <a href="controller/deleteTransaksi.php?id=<?= $row['id_transaksi'] ?>" role="button" class="btn btn-danger mt-3">Delete</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
