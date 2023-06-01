@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $query);
         <div class="row">
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <div class=" col-lg-3">
-                    <div class=" mb-4 bg-30 p-3 rounded-4 scale" data-bs-toggle="modal" data-bs-target="#infoSkill<?= $row['id'] ?>">
+                    <div class=" mb-4 bg-30 p-3 rounded-4 scale">
                         <div class="row justify-content-center align-items-center">
                             <div class="text-center">
                                 <img src="images/books/<?= $row['cover_buku'] ?>" class="rounded-4 object-fit-cover" width="149px" height="215px" alt="<?= $row['cover_buku'] ?>">
@@ -34,11 +34,6 @@ $result = mysqli_query($conn, $query);
                                     Buy
                                 </a>
                             </div>
-                            <!-- <div class="col-lg-4 mt-3">
-                                <a class="btn btn-primary bg-danger border-0 py-3" role="button" data-bs-toggle="modal" data-bs-target="#deleteSkill<?= $row['id'] ?>">
-                                    Delete
-                                </a>
-                            </div> -->
                         </div>
                     </div>
                 </div>

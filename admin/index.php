@@ -59,28 +59,36 @@ $row = mysqli_fetch_assoc($result);
         <br />
 
         <div class="col-div-3">
-            <div class="box">
-                <p><?= $total_user ?><br /><span>Customers</span></p>
-                <i class="fa fa-users box-icon"></i>
-            </div>
+            <a href="customer.php">
+                <div class="box">
+                    <p><?= $total_user ?><br /><span>Customers</span></p>
+                    <i class="fa fa-users box-icon"></i>
+                </div>
+            </a>
         </div>
         <div class="col-div-3">
-            <div class="box">
-                <p><?= $total_buku ?><br /><span>Books</span></p>
-                <i class="fa fa-book box-icon"></i>
-            </div>
+            <a href="book.php">
+                <div class="box">
+                    <p><?= $total_buku ?><br /><span>Books</span></p>
+                    <i class="fa fa-book box-icon"></i>
+                </div>
+            </a>
         </div>
         <div class="col-div-3">
-            <div class="box">
-                <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
-                <i class="fa fa-money-bill-trend-up box-income"></i>
-            </div>
+            <a href="income.php">
+                <div class="box">
+                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <i class="fa fa-money-bill-trend-up box-income"></i>
+                </div>
+            </a>
         </div>
         <div class="col-div-3">
-            <div class="box">
-                <p><?= $total_orders ?><br /><span>Orders</span></p>
-                <i class="fa fa-shopping-bag box-icon"></i>
-            </div>
+            <a href="orders.php">
+                <div class="box">
+                    <p><?= $total_orders ?><br /><span>Orders</span></p>
+                    <i class="fa fa-shopping-bag box-icon"></i>
+                </div>
+            </a>
         </div>
         <div class="clearfix"></div>
         <br /><br />

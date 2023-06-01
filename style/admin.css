@@ -130,6 +130,9 @@ body {
     font-weight: 400;
     color: #000000;
 }
+.h-65{
+    height: 65px;
+}
 
 .box-icon {
     font-size: 40px !important;
@@ -158,11 +161,23 @@ body {
     width: 30%;
     float: left;
 }
+.col-div-5 {
+    width: 60%;
+    float: left;
+}
+.col-div-1{
+    width: 10%;
+    float: left;
+}
 
 .content-box {
     padding: 20px;
 }
 
+.align-center {
+    display: flex;
+    align-items: center;
+  }
 .content-box p {
     margin: 0px;
     font-size: 20px;
