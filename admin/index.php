@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="col-div-3">
             <a href="income.php">
                 <div class="box">
-                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <p>Rp. <?= number_format($total_income) ?><br /><span> Total Income </span></p>
                     <i class="fa fa-money-bill-trend-up box-income"></i>
                 </div>
             </a>
@@ -95,9 +95,9 @@ $row = mysqli_fetch_assoc($result);
         <div class="col-div-8">
             <!-- main-content start-->
             <div class="box-8">
-                <div class="container mt-2">
-                    <div class="d-flex row justify-content-evenly bg-30 p-4 rounded-3 shadow-lg">
-                        <h1 class="fs-2 mb-5 text-center">You are an <span class="c-10">Admin</span>!</h1>
+                <div class="container mt-4">
+                    <div class="align-items-center row justify-content-center bg-30 p-4 rounded-3 shadow-lg">
+                        <h1 class="fs-2 mb-2 text-center"><span class="c-10">Admin Profile</span></h1>
                         <div class="content col-md-4 mt-5 mb-3">
                             <img class="d-absolute rounded-circle object-fit-cover ms-5" src="../images/profile/default.jpg" alt="admin.jpg" width="150px" height="150px">
                         </div>

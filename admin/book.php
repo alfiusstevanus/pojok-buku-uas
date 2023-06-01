@@ -53,12 +53,16 @@ $result2 = mysqli_query($conn, $query2);
             </a>
         </div>
         <div class="col-div-1">
-            <a href="addBook.php">
+            <!-- <a href="addBook.php">
                 <div class="box rounded-4">
                     <p><span>Add</span></p>
                     <i class="fa-solid fa-plus box-income"></i>
                 </div>
-            </a>
+            </a> -->
+
+            <button onclick="window.location.href='addbook.php'" class="btn btn-secondary mt-4 bg-10 c-60 ">
+                ADD BOOK <i class="fa-solid fa-plus ms-1"></i>
+            </button>
         </div>
 
         <div class="clearfix"></div>
