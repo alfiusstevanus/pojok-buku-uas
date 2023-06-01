@@ -9,12 +9,12 @@
     <title>Tambah Buku</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleEdit.css">
-
+    
 <body>
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h3 class="tittle">Tambah Buku</h3>
-          <form method="POST" enctype="multipart/form-data" action="actionInput.php" >
+          <form method="POST" enctype="multipart/form-data" action="controller/actionAddBook.php" >
               <div class="formbold-input-flex-judul">
                 <div>
                     <label for="judul_buku" class="formbold-form-label"> Judul Buku </label>

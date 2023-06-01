@@ -1,9 +1,9 @@
 <?php
-include ('../server/connection.php');
+include ('../../server/connection.php');
 
 
 if (isset($_POST['up'])) {
-    $path = "../images/" . basename($_FILES['image']['name']);
+    $path = "../../images/" . basename($_FILES['image']['name']);
 
     $image = $_FILES['image']['name'];
     $judul_buku = $_POST['judul_buku'];
@@ -19,7 +19,7 @@ if (isset($_POST['up'])) {
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $path)) {
         echo "<script> alert('Buku berhasil di upload.');
-        window.location.href='pageTambahBuku.php';
+        window.location.href='../addBook.php';
 
         </script>";
     }

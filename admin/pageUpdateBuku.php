@@ -15,7 +15,7 @@
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h3 class="tittle">Update Buku</h3>
-          <form class="mt-5" action="actionInput.php" method="POST">
+          <form class="mt-5" action="actionAddBook.php" method="POST">
               <div class="formbold-input-flex-judul">
                 <div>
                     <label for="judul_buku" class="formbold-form-label"> Judul Buku </label>
