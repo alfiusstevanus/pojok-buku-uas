@@ -118,8 +118,10 @@ $result3 = mysqli_query($conn, $query3);
                                 <?php } else if ($row['status'] == 'Canceled') { ?>
                                     <a class="btn btn-danger my-3 text-center" data-bs-toggle="modal" data-bs-target="#deleteTransaksi<?= $row['id_transaksi'] ?>" role=" button">Delete</a>
                                 <?php } else if ($row['status'] == 'Shipped') { ?>
-                                    <p class="text-center mt-4 c-10">shipped!</p>
-                                <?php } ?>
+                                    <p class="text-center mt-4 c-10">Shipped!</p>
+                                <?php } else if ($row['status'] == 'Success') { ?>
+                                    <p class="text-center mt-4 text-success">Success!</p>
+                                <?php } else ?>
                             </td>
                         </tr>
                         <div class="modal fade" id="editStatus<?= $row['id_transaksi'] ?>" tabindex="-1" aria-labelledby="editStatusLabel" aria-hidden="true">
