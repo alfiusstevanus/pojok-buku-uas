@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +14,7 @@
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h3 class="tittle">Tambah Buku</h3>
-          <form class="mt-5" action="actionInput.php" method="POST">
+          <form method="POST" enctype="multipart/form-data" action="actionInput.php" >
               <div class="formbold-input-flex-judul">
                 <div>
                     <label for="judul_buku" class="formbold-form-label"> Judul Buku </label>
@@ -44,7 +43,7 @@
               <div class="formbold-input-flex">
                 <div>
                     <label for="harga" class="formbold-form-label"> Harga </label>
-                    <input type="text" name="harga" placeholder="Rp. 60.000" class="formbold-form-input"/>
+                    <input type="text" name="harga" placeholder="60000" class="formbold-form-input"/>
                 </div>
                 <div>
                     <label for="phone" class="formbold-form-label-stok"> Stok </label>
@@ -59,14 +58,12 @@
 
               <div class="formbold-input-flex">
                 <div>
-                    <label for="cover_buku" class="formbold-form-label"> Cover Buku </label>
-                    <input type="file" name="cover_buku" class="formbold-form-input"/>
+                    <label for="image" class="formbold-form-label"> Cover Buku </label>
+                    <input type="file" name="image" class="formbold-form-input"/>
                 </div>
               </div>
       
-              <button class="formbold-btn">
-                  Tambah
-              </button>
+              <input type="submit" class="formbold-btn" name="up" value="Tambah"></input>
           </form>
         </div>
       </div>
