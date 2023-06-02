@@ -23,7 +23,7 @@ $result3 = mysqli_query($conn, $query3);
 <html>
 
 <head>
-    <title>Book Corner | Admin</title>
+    <title>Admin | Orders</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">

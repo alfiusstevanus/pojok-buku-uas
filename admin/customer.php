@@ -18,7 +18,7 @@ $result2 = mysqli_query($conn, $query2);
 <html>
 
 <head>
-    <title>Book Corner | Admin</title>
+    <title>Admin | List Customers</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">
