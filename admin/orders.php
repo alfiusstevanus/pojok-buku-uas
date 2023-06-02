@@ -16,7 +16,7 @@ $row_income = mysqli_fetch_assoc($result2);
 $total_orders = $row_orders['total_orders'];
 $total_income = $row_income['income'];
 $query3 = "SELECT id_transaksi, b.judul_buku, jumlah, t.total, t.status, t.alamat, date FROM transaksi t
-JOIN buku b ON b.id_buku = t.id_buku ORDER BY date DESC";
+JOIN buku b ON b.id_buku = t.id_buku ORDER BY id_transaksi DESC";
 $result3 = mysqli_query($conn, $query3);
 ?>
 <!Doctype HTML>

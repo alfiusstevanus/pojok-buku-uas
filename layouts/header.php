@@ -70,6 +70,7 @@ if ($_SESSION['status'] == 'Admin') {
                                 rounded-circle " width="45px" height="45px"></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
+                                    <li><a class="dropdown-item " href="cart.php">Cart</a></li>
                                     <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
                                     <li><a class="dropdown-item " href="saldo.php">Balance</a></li>
                                     <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>

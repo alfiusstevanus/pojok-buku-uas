@@ -11,7 +11,7 @@ $query = "SELECT COUNT(*) AS total_user FROM akun WHERE status = 'User'";
 $result = $conn->query($query);
 $row_user = mysqli_fetch_assoc($result);
 $total_user = $row_user['total_user'];
-$query2 = "SELECT * FROM akun WHERE status = 'User'";
+$query2 = "SELECT * FROM akun WHERE status = 'User' ORDER BY id DESC";
 $result2 = mysqli_query($conn, $query2);
 ?>
 <!Doctype HTML>
