@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'server/connection.php';
+$title = '| Transaction';
 include('layouts/header.php');
 $id = $_SESSION['id'];
 $query = "SELECT buku.id_buku, id_transaksi, date, buku.judul_buku,

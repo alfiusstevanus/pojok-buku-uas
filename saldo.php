@@ -5,6 +5,7 @@ include 'server/connection.php';
 $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
+$title = '| Balance';
 include('layouts/header.php');
 ?>
 <section class="profil mt-5 mb-2">

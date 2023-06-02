@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'server/connection.php';
+$title = '| Book';
 include('layouts/header.php');
 
 if (isset($_GET['id'])) {

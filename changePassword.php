@@ -5,6 +5,7 @@ $id = $_SESSION['id'];
 $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
+$title = '| Change Password!';
 include('layouts/header.php');
 ?>
 <section class="changePassword pt-5 pb-2">

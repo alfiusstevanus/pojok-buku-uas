@@ -1,5 +1,6 @@
 <?php
 session_start();
+$title = '| My Cart';
 if (!empty($_SESSION['cart'])) {
     include('layouts/header.php');
 ?>

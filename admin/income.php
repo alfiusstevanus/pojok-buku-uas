@@ -22,10 +22,11 @@ $result3 = mysqli_query($conn, $query3);
 <html>
 
 <head>
-    <title></title>
+    <title>Book Corner | Admin</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">
+    <link rel="icon" href="../images/logo books corner 2.png">
 </head>
 
 

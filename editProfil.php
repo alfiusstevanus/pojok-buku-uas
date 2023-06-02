@@ -6,6 +6,7 @@ $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
 $_SESSION['photo'] = $row['photo'];
+$title = '| Edit profile';
 include('layouts/header.php');
 ?>
 <section class="editProfil mt-5 mb-2">

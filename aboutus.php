@@ -3,6 +3,7 @@ session_start();
 $index = 'text-secondary';
 $about = 'text-dark';
 $book = 'text-secondary';
+$title = '| About Us';
 include('layouts/header.php');
 ?>
 <section>

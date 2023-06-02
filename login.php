@@ -87,7 +87,7 @@ if (isset($_POST['login'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/logo books corner 2.png">
-    <title>Books Corner</title>
+    <title>Books Corner | Login</title>
 </head>
 
 <body>

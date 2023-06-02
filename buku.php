@@ -4,6 +4,7 @@ $index = 'text-secondary';
 $about = 'text-secondary';
 $book = 'text-dark';
 include 'server/connection.php';
+$title = '| Books';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
 $result = mysqli_query($conn, $query);
