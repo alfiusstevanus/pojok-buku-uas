@@ -9,6 +9,9 @@ body {
 .clearfix {
     clear: both;
 }
+.no-resize{
+    resize: none;
+}
 
 .logo {
     margin: 0px;
