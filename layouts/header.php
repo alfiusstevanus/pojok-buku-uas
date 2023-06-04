@@ -32,7 +32,7 @@ if ($_SESSION['status'] == 'Admin') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/logo books corner 2.png">
-    <title>Books Corner</title>
+    <title>Books Corner <?= $title ?></title>
 </head>
 
 <body>
@@ -70,6 +70,7 @@ if ($_SESSION['status'] == 'Admin') {
                                 rounded-circle " width="45px" height="45px"></a>
                                 <ul class="dropdown-menu dropdown-menu-light justify-content-center">
                                     <li><a class="dropdown-item " href="profil.php">Profile</a></li>
+                                    <li><a class="dropdown-item " href="cart.php">Cart</a></li>
                                     <li><a class="dropdown-item " href="transaction.php">Transaction</a></li>
                                     <li><a class="dropdown-item " href="saldo.php">Balance</a></li>
                                     <li><a class="dropdown-item  " href="changePassword.php">Change Password</a></li>

@@ -15,17 +15,18 @@ $row_orders = mysqli_fetch_assoc($result2);
 $total_income = $row_income['income'];
 $total_orders = $row_orders['total_orders'];
 $query3 = "SELECT id_transaksi, a.name, total, date, t.status FROM transaksi t
-JOIN akun a ON a.id = t.id WHERE t.status = 'Success' ORDER BY date DESC";
+JOIN akun a ON a.id = t.id WHERE t.status = 'Success' ORDER BY id_transaksi DESC";
 $result3 = mysqli_query($conn, $query3);
 ?>
 <!Doctype HTML>
 <html>
 
 <head>
-    <title></title>
+    <title>Admin | Income</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">
+    <link rel="icon" href="../images/logo books corner 2.png">
 </head>
 
 
@@ -50,7 +51,7 @@ $result3 = mysqli_query($conn, $query3);
         <div class="col-div-3">
             <a href="">
                 <div class="box">
-                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <p><?= number_format($total_income) ?> IDR<br /><span>Total Income</span></p>
                     <i class="fa fa-money-bill-trend-up box-income"></i>
                 </div>
             </a>
@@ -71,19 +72,19 @@ $result3 = mysqli_query($conn, $query3);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">ID Transaksi</div>
+                            <div class="bg-30 h-65 pt-4">ID Transaction</div>
                         </th>
                         <th class="col-4 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Nama Customer</div>
+                            <div class="bg-30 h-65 pt-4">Customer Name</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-4">Income</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Tgl. Transaksi</div>
+                            <div class="bg-30 h-65 pt-4">Date Transaction</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Keterangan</div>
+                            <div class="bg-30 h-65 pt-4">Status</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result3)) : ?>
@@ -92,7 +93,7 @@ $result3 = mysqli_query($conn, $query3);
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row["name"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($row["total"]) ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= number_format($row["total"]) ?> IDR" readonly>
                             </td>
                             <td> <input type="date" class="form-control text-center my-3" value="<?= $row['date'] ?>" readonly>
                             </td>

@@ -6,12 +6,13 @@ $q = "SELECT * FROM akun WHERE id = $id";
 $result = mysqli_query($conn, $q);
 $row = mysqli_fetch_assoc($result);
 $_SESSION['photo'] = $row['photo'];
+$title = '| Edit profile';
 include('layouts/header.php');
 ?>
 <section class="editProfil mt-5 mb-2">
     <div class="container mt-2">
         <div class="d-flex row justify-content-evenly p-5 rounded-3 shadow-lg">
-            <h1 class="fs-2 mb-5 text-center">User Akun</h1>
+            <h1 class="fs-2 mb-5 text-center">User Account</h1>
             <div class="content col-md-4 mt-5 mb-3">
                 <img class="d-absolute rounded-circle object-fit-cover ms-5 mt-5" src="images/profile/<?= $row['photo'] ?>" alt="<?= $row['name'] ?>.jpg" width="250px" height="250px">
             </div>
@@ -26,24 +27,24 @@ include('layouts/header.php');
                         <input type="text" name="umur" class="form-control my-3" value="<?= $row['umur'] ?>" required>
                     </div>
                     <div>
-                        <p>Telp:</p>
+                        <p>Telphone:</p>
                         <input type="text" name="telp" class="form-control my-3" value="<?= $row['telephone'] ?>" required>
                     </div>
                     <div>
-                        <p>Age:</p>
+                        <p>Gender:</p>
                         <label class="form-check-label form-control my-3">
-                            <input type="radio" name="kelamin" value="Laki - laki" required <?php
-                                                                                            if ($row['kelamin'] == 'Laki - laki') {
-                                                                                                echo 'checked';
-                                                                                            }
-                                                                                            ?>> Man
+                            <input type="radio" name="kelamin" value="Man" required <?php
+                                                                                    if ($row['kelamin'] == 'Laki - laki') {
+                                                                                        echo 'checked';
+                                                                                    }
+                                                                                    ?>> Man
                         </label>
                         <label class="form-check-label form-control my-3">
-                            <input type="radio" name="kelamin" value="Perempuan" required <?php
-                                                                                            if ($row['kelamin'] == 'Perempuan') {
-                                                                                                echo 'checked';
-                                                                                            }
-                                                                                            ?>> Woman
+                            <input type="radio" name="kelamin" value="Woman" required <?php
+                                                                                        if ($row['kelamin'] == 'Perempuan') {
+                                                                                            echo 'checked';
+                                                                                        }
+                                                                                        ?>> Woman
                         </label>
                     </div>
                     <div>

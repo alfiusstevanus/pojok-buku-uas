@@ -4,16 +4,32 @@ $index = 'text-secondary';
 $about = 'text-secondary';
 $book = 'text-dark';
 include 'server/connection.php';
+$title = '| Books';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
 $result = mysqli_query($conn, $query);
+
+if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $q = "Select * from buku where judul_buku LIKE '%$keyword%'";
+} else {
+    $q = 'Select * from buku';
+}
+
+$result = mysqli_query($conn, $q);
 ?>
 <section>
     <div class="container">
         <div class="d-flex row align-items-center">
             <div class="col-md-4 d-flex flex-inline">
-                <h1 class="fs-2 welcoming py-5">Book Corner List</h1>
+                <h1 class="fs-2 welcoming pt-5">Book Corner List</h1>
             </div>
+            <form class="search pb-3" method="post">
+                <input class="search-box" type="text" name="keyword" placeholder="Book Title" />
+                <button class="btn-cari" name="cari">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
         <div class="row">
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
@@ -27,7 +43,7 @@ $result = mysqli_query($conn, $query);
                                 <h5 class="text-center border-0 fw-semibold pt-3"><?= $row['judul_buku'] ?></h5>
                             </div>
                             <div>
-                                <h5 class="text-center border-0 pt-2 pb-2 fw-light">Rp. <?= number_format($row['harga']) ?></h5>
+                                <h5 class="text-center border-0 pt-2 pb-2 fw-light"><?= number_format($row['harga']) ?> IDR</h5>
                             </div>
                             <div class="col-lg-4 text-center">
                                 <a class="btn btn-secondary bg-10 border-0 py-2 px-4" style="" role="button" href="detil-buku.php?id=<?= $row['id_buku'] ?>">

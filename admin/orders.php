@@ -16,17 +16,18 @@ $row_income = mysqli_fetch_assoc($result2);
 $total_orders = $row_orders['total_orders'];
 $total_income = $row_income['income'];
 $query3 = "SELECT id_transaksi, b.judul_buku, jumlah, t.total, t.status, t.alamat, date FROM transaksi t
-JOIN buku b ON b.id_buku = t.id_buku ORDER BY date DESC";
+JOIN buku b ON b.id_buku = t.id_buku ORDER BY id_transaksi DESC";
 $result3 = mysqli_query($conn, $query3);
 ?>
 <!Doctype HTML>
 <html>
 
 <head>
-    <title></title>
+    <title>Admin | Orders</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">
+    <link rel="icon" href="../images/logo books corner 2.png">
 </head>
 
 
@@ -51,7 +52,7 @@ $result3 = mysqli_query($conn, $query3);
         <div class="col-div-3">
             <a href="income.php">
                 <div class="box">
-                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <p><?= number_format($total_income) ?> IDR<br /><span>Total Income</span></p>
                     <i class="fa fa-money-bill-trend-up box-income"></i>
                 </div>
             </a>
@@ -72,22 +73,22 @@ $result3 = mysqli_query($conn, $query3);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">ID Transaksi</div>
+                            <div class="bg-30 h-65 pt-2">ID Transaction</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Buku</div>
+                            <div class="bg-30 h-65 pt-4">Book</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Jumlah</div>
+                            <div class="bg-30 h-65 pt-4">Amount</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Total Harga</div>
+                            <div class="bg-30 h-65 pt-4">Total Price</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Alamat</div>
+                            <div class="bg-30 h-65 pt-4">Address</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Waktu</div>
+                            <div class="bg-30 h-65 pt-4">Time</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-4">Status</div>
@@ -104,7 +105,7 @@ $result3 = mysqli_query($conn, $query3);
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row["jumlah"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($row["total"]) ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= number_format($row["total"]) ?> IDR" readonly>
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row['alamat'] ?>" readonly>
                             </td>
@@ -114,7 +115,7 @@ $result3 = mysqli_query($conn, $query3);
                             </td>
                             <td class="text-center">
                                 <?php if ($row['status'] == 'In Progress') { ?>
-                                    <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#editStatus<?= $row['id_transaksi'] ?>" role=" button">Proses</a>
+                                    <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#editStatus<?= $row['id_transaksi'] ?>" role=" button">Proccess</a>
                                 <?php } else if ($row['status'] == 'Canceled') { ?>
                                     <a class="btn btn-danger my-3 text-center" data-bs-toggle="modal" data-bs-target="#deleteTransaksi<?= $row['id_transaksi'] ?>" role=" button">Delete</a>
                                 <?php } else if ($row['status'] == 'Shipped') { ?>
@@ -128,7 +129,7 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="editStatusLabel">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <h5 class="modal-title" id="editStatusLabel">ID Transaction: <?= $row['id_transaksi'] ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -155,13 +156,13 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteTransaksi">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <h5 class="modal-title" id="deleteTransaksi">ID Transaction: <?= $row['id_transaksi'] ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="container">
                                             <div>
-                                                <h5>Anda yakin ingin menghapus Transaksi ini?</h5>
+                                                <h5>Are you sure want to delete this Transaction?</h5>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Cancel</button>

@@ -20,6 +20,8 @@ if (isset($_GET['logout'])) {
 $index = 'text-dark';
 $about = 'text-secondary';
 $book = 'text-secondary';
+$name = explode(" ", $_SESSION['name']);
+$title = "| " . $name[0];
 include('layouts/header.php');
 ?>
 <section class="hero ms-5">

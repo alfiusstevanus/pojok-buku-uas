@@ -29,7 +29,7 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/logo books corner 2.png">
-    <title>Books Corner</title>
+    <title>Books Corner | Register</title>
 </head>
 
 <body>
@@ -68,13 +68,13 @@ if (isset($_SESSION['logged_in'])) {
                     <div class="p-2 ms-2 ">
                         <label class="c-10">Gender</label>
                         <div class="form-check">
-                            <input name="kelamin" value="Laki - laki" class="form-check-input" type="radio" name="flexRadioDefault" id="man" required>
+                            <input name="kelamin" value="Man" class="form-check-input" type="radio" name="flexRadioDefault" id="man" required>
                             <label class="form-check-label" for="man">
                                 Man
                             </label>
                         </div>
                         <div class="form-check">
-                            <input name="kelamin" value="Perempuan" class="form-check-input" type="radio" name="flexRadioDefault" id="woman" required>
+                            <input name="kelamin" value="Woman" class="form-check-input" type="radio" name="flexRadioDefault" id="woman" required>
                             <label class="form-check-label" for="woman">
                                 Woman
                             </label>
@@ -85,7 +85,7 @@ if (isset($_SESSION['logged_in'])) {
                         <input id="umur" type="number" class="form-control" name="umur" autocomplete="off">
                     </div>
                     <div class="p-3 ">
-                        <label class="c-10" for="alamat">Alamat</label>
+                        <label class="c-10" for="alamat">Address</label>
                         <input id="alamat" type="text" class="form-control" name="alamat" autocomplete="off">
                     </div>
                     <div class="p-2 m-3  text-center">
@@ -113,7 +113,7 @@ if (isset($_SESSION['logged_in'])) {
                 if (isset($_GET["registered"]) && $_GET["registered"] == false) {
                 ?>
                     <div id="alert" class="text-center alert alert-danger alert-dismissible fade show rounded-25 mt-2 shadow-lg " role="alert">
-                        Akun gagal dibuat !
+                        Registration failed !
                     </div>
                 <?php }  ?>
             </div>

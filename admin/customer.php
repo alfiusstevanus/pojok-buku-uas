@@ -11,17 +11,27 @@ $query = "SELECT COUNT(*) AS total_user FROM akun WHERE status = 'User'";
 $result = $conn->query($query);
 $row_user = mysqli_fetch_assoc($result);
 $total_user = $row_user['total_user'];
-$query2 = "SELECT * FROM akun WHERE status = 'User'";
+$query2 = "SELECT * FROM akun WHERE status = 'User' ORDER BY id DESC";
 $result2 = mysqli_query($conn, $query2);
+
+if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $q = "SELECT * FROM akun WHERE name LIKE '%$keyword%' AND status = 'User' ORDER BY id DESC";
+} else {
+    $q = "SELECT * FROM akun WHERE status = 'User' ORDER BY id DESC";
+}
+
+$result2 = mysqli_query($conn, $q);
 ?>
 <!Doctype HTML>
 <html>
 
 <head>
-    <title></title>
+    <title>Admin | List Customers</title>
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/fontawesome/css/all.min.css">
+    <link rel="icon" href="../images/logo books corner 2.png">
 </head>
 
 
@@ -54,34 +64,40 @@ $result2 = mysqli_query($conn, $query2);
         </div>
         <div class="clearfix"></div>
         <br /><br />
+        <form class="search pb-3" method="post">
+            <input class="search-box" type="text" name="keyword" placeholder="Customer Name" />
+            <button class="btn-cari" name="cari">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
         <div class="bg-30">
             <!-- main-content start-->
             <div class="scrollable-content overflow-auto" style="height: 400px;">
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">ID</div>
+                            <div class="bg-30 h-65 pt-4">ID</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Email</div>
+                            <div class="bg-30 h-65 pt-4">Email</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Nama</div>
+                            <div class="bg-30 h-65 pt-4">Name</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Telephone</div>
+                            <div class="bg-30 h-65 pt-4">Telephone</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Umur</div>
+                            <div class="bg-30 h-65 pt-4">Age</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Jenis Kelamin</div>
+                            <div class="bg-30 h-65 pt-4">Gender</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Alamat</div>
+                            <div class="bg-30 h-65 pt-4">Address</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Delete</div>
+                            <div class="bg-30 h-65 pt-4">Action</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result2)) : ?>
@@ -112,7 +128,7 @@ $result2 = mysqli_query($conn, $query2);
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Anda yakin ingin menghapus Akun "<?= $row['name'] ?>" secara Permanen?</h5>
+                                        <h5>Are you sure want to delete Account "<?= $row['name'] ?>" for Permanent?</h5>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
