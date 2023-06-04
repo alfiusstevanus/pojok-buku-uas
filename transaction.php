@@ -6,7 +6,7 @@ include('layouts/header.php');
 $id = $_SESSION['id'];
 $query = "SELECT buku.id_buku, id_transaksi, date, buku.judul_buku,
 buku.harga, jumlah, total, status FROM transaksi JOIN buku ON
-transaksi.id_buku = buku.id_buku WHERE transaksi.id = $id and (transaksi.status = 'In Progress' OR transaksi.status = 'Shipped' OR transaksi.status = 'Success')";
+transaksi.id_buku = buku.id_buku WHERE transaksi.id = $id and (transaksi.status = 'In Progress' OR transaksi.status = 'Shipped' OR transaksi.status = 'Success') ORDER BY  id_transaksi DESC";
 $result = mysqli_query($conn, $query);
 $subtotal = 0;
 ?>
