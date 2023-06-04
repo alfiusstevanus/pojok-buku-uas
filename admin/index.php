@@ -107,7 +107,7 @@ $row = mysqli_fetch_assoc($result);
                             <p><?= $row['name'] ?></p>
                             <h6 class="mb-2">Age:</h6>
                             <p><?= $row['umur'] ?></p>
-                            <h6>Alamat:</h6>
+                            <h6>Address:</h6>
                             <p><?= $row['alamat'] ?></p>
                         </div>
                     </div>

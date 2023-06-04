@@ -15,11 +15,11 @@ $subtotal = 0;
         <div class="div d-flex row justify-content-center p-5 rounded-3 shadow-lg">
             <table class="table" border="1">
                 <tr>
-                    <th class="col-1 text-center">ID Transaksi</th>
-                    <th class="text-center">Tanggal</th>
-                    <th class="col-2 text-center">Buku</th>
-                    <th class="text-center">Harga</th>
-                    <th class="col-1 text-center">Jumlah</th>
+                    <th class="col-1 text-center">ID Transaction</th>
+                    <th class="text-center">Date</th>
+                    <th class="col-2 text-center">Book</th>
+                    <th class="text-center">Price</th>
+                    <th class="col-1 text-center">Amount</th>
                     <th class="text-center">Total</th>
                     <th class="text-center">Status</th>
                     <th class="col-1 text-center">Action</th>
@@ -42,7 +42,7 @@ $subtotal = 0;
                         </td>
                         <td>
                             <?php if ($row['status'] == 'Success') { ?>
-                                <a class="btn btn-primary my-3" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Beli Lagi</a>
+                                <a class="btn btn-primary my-3" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Re-purchase</a>
                             <?php } else if ($row['status'] == 'Shipped') { ?>
                                 <a class="btn btn-success my-3 text-center" data-bs-toggle="modal" data-bs-target="#transaksiSelesai<?= $row['id_transaksi'] ?>" role=" button">Done</a>
                             <?php } else if ($row['status'] == 'In Progress') { ?>
@@ -54,7 +54,7 @@ $subtotal = 0;
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="transaksiSelesaiLabel">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                    <h5 class="modal-title" id="transaksiSelesaiLabel">ID Transaction: <?= $row['id_transaksi'] ?></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -81,7 +81,7 @@ $subtotal = 0;
                 endwhile ?>
                 <th colspan="5"></th>
                 <th colspan="3">
-                    <p class="fs-4">Total belanja saya: <span class="c-10">Rp. <?= number_format($subtotal) ?></span></p>
+                    <p class="fs-4">My Spending: <span class="c-10">Rp. <?= number_format($subtotal) ?></span></p>
                 </th>
                 <th></th>
                 <th>&nbsp;</th>

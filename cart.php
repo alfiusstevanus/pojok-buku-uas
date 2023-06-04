@@ -13,11 +13,11 @@ include('layouts/header.php');
             </div>
             <table class="table" border="1">
                 <tr>
-                    <th class="col-1 text-center">ID Buku</th>
-                    <th class="col-2 text-center">Judul</th>
-                    <th class="col-2 text-center">Penerbit</th>
-                    <th class="col-2 text-center">Penulis</th>
-                    <th class="col-2 text-center">Harga</th>
+                    <th class="col-1 text-center">Book ID</th>
+                    <th class="col-2 text-center">Title</th>
+                    <th class="col-2 text-center">Publisher</th>
+                    <th class="col-2 text-center">Author</th>
+                    <th class="col-2 text-center">Price</th>
                     <th class="col-1 text-center"></th>
                     <th class="col-1 text-center"></th>
                 </tr>

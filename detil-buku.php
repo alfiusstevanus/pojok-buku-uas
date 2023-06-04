@@ -38,16 +38,16 @@ if (isset($_GET['id'])) {
 
                                 <h4>RP. <?= number_format($row['harga']) ?></h4>
                                 <h4><?= $row['judul_buku']; ?></h4>
-                                <p>Stok: <?php if ($row['stok'] > 0) {
+                                <p>Stock: <?php if ($row['stok'] > 0) {
                                                 echo $row['stok'];
                                             } else { ?>
-                                        <span class="text-danger">Habis</span>
+                                        <span class="text-danger">Sold out!</span>
                                     <?php } ?>
                                 </p>
                                 <form action="controller/checkout.php?id_buku=<?= $row['id_buku'] ?>" method="post">
                                     <div class="text-center">
                                         <select class="my-3 text-center bg-60 py-1" name="jumlah">
-                                            <option value="0">Jumlah Buku</option>
+                                            <option value="0">Book Amount</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -91,7 +91,7 @@ if (isset($_GET['id'])) {
                                     <!-- alert message! -->
 
 
-                                    <h5 class="mt-5 text-start">Sinopsis:</h5>
+                                    <h5 class="mt-5 text-start">Synopsis:</h5>
                                     <p style="text-align: justify;"><?= $row['sinopsis'] ?></p>
 
                                     <h4 class="mt-5 text-start mb-4">For <span class="c-10">You!</span></h4>
@@ -130,12 +130,12 @@ if (isset($_GET['id'])) {
                 <div class="modal-dialog">
                     <div class="modal-content info-skill">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="checkoutLabel">Konfirmasi Alamat</h5>
+                            <h5 class="modal-title" id="checkoutLabel">Confirm Address!</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div>
-                                <h5>Rumah(Utama)</h5>
+                                <h5>Home(Priority)</h5>
                                 <textarea name="alamat" id="" cols="5" rows="3" class="form-control my-3 no-resize"><?= $_SESSION['name'] ?> (<?= $_SESSION['telephone'] ?>)<?= "\n" . $_SESSION['alamat'] ?></textarea>
                                 <a data-bs-toggle="modal" data-bs-target="#password" role="button" class="btn btn-primary btn-success mt-2">BUY</a>
                             </div>
@@ -147,12 +147,12 @@ if (isset($_GET['id'])) {
                 <div class="modal-dialog">
                     <div class="modal-content info-skill">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="passwordLabel">Masukan Password:</h5>
+                            <h5 class="modal-title" id="passwordLabel">Input Password:</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div>
-                                <p>Masukan Password Anda:</p>
+                                <p>Input your Password:</p>
                                 <input type="password" class="form-control" name="password" placeholder="Password">
                                 <input type="submit" class="btn btn-primary btn-success mt-3" value="Confirm">
                                 </form>

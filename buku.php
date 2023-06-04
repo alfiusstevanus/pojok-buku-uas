@@ -8,13 +8,28 @@ $title = '| Books';
 include('layouts/header.php');
 $query = 'SELECT * FROM buku';
 $result = mysqli_query($conn, $query);
+
+if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $q = "Select * from buku where judul_buku LIKE '%$keyword%'";
+} else {
+    $q = 'Select * from buku';
+}
+
+$result = mysqli_query($conn, $q);
 ?>
 <section>
     <div class="container">
         <div class="d-flex row align-items-center">
             <div class="col-md-4 d-flex flex-inline">
-                <h1 class="fs-2 welcoming py-5">Book Corner List</h1>
+                <h1 class="fs-2 welcoming pt-5">Book Corner List</h1>
             </div>
+            <form class="search pb-3" method="post">
+                <input class="search-box" type="text" name="keyword" placeholder="Book Title" />
+                <button class="btn-cari" name="cari">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
         <div class="row">
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>

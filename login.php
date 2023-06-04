@@ -131,18 +131,17 @@ if (isset($_POST['login'])) {
                 if (isset($_GET["logined"]) && $_GET["logined"] == false) {
                 ?>
                     <div id="alert" class="text-center alert alert-danger alert-dismissible fade show rounded-25 mt-2 shadow-lg " role="alert">
-                        Email atau Password salah !
+                        Email or Password is wrong!
                     </div>
                 <?php }  ?>
                 <?php
                 if (isset($_GET["registered"]) && $_GET["registered"] == true) {
                 ?>
                     <div id="alert" class="text-center alert alert-success alert-dismissible fade show rounded-25 mt-2 shadow-lg " role="alert">
-                        Akun Berhasil Dibuat ^_^
+                        Account Successfully Created ^_^
                     </div>
                 <?php } ?>
             </div>
-
         </div>
     </div>
 </body>

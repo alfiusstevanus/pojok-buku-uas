@@ -13,6 +13,15 @@ $row_buku = mysqli_fetch_assoc($result);
 $total_buku = $row_buku['total_buku'];
 $query2 = "SELECT * FROM buku ORDER BY tahun_terbit DESC";
 $result2 = mysqli_query($conn, $query2);
+
+if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $q = "SELECT * FROM buku WHERE judul_buku LIKE '%$keyword%' ORDER BY tahun_terbit DESC";
+} else {
+    $q = "SELECT * FROM buku ORDER BY tahun_terbit DESC";
+}
+
+$result2 = mysqli_query($conn, $q);
 ?>
 <!Doctype HTML>
 <html>
@@ -64,6 +73,12 @@ $result2 = mysqli_query($conn, $query2);
 
         <div class="clearfix"></div>
         <br /><br />
+        <form class="search pb-3" method="post">
+            <input class="search-box" type="text" name="keyword" placeholder="Book Title" />
+            <button class="btn-cari" name="cari">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
         <div class="bg-30">
             <!-- main-content start-->
             <div class="scrollable-content overflow-auto" style="height: 400px;">
@@ -141,37 +156,37 @@ $result2 = mysqli_query($conn, $query2);
                                             <div class="container row">
                                                 <div class="col-lg-6">
                                                     <div>
-                                                        <h5>Judul Buku:</h5>
+                                                        <h5>Book Title:</h5>
                                                         <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Penulis:</h5>
+                                                        <h5>Author:</h5>
                                                         <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Penerbit:</h5>
+                                                        <h5>Publisher:</h5>
                                                         <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Tahun Terbit:</h5>
+                                                        <h5>Year:</h5>
                                                         <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Edit Cover:</h5>
+                                                        <h5>Update Cover:</h5>
                                                         <input type="file" name="image" class="form-control my-3">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div>
-                                                        <h5>Harga:</h5>
+                                                        <h5>Price:</h5>
                                                         <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Stok:</h5>
+                                                        <h5>Stock:</h5>
                                                         <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required>
                                                     </div>
                                                     <div>
-                                                        <h5>Sinopsis:</h5>
+                                                        <h5>Synopsis:</h5>
                                                         <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9"><?= $row['sinopsis'] ?></textarea>
                                                     </div>
                                                 </div>
@@ -200,37 +215,37 @@ $result2 = mysqli_query($conn, $query2);
                                 <div class="container row">
                                     <div class="col-lg-6">
                                         <div>
-                                            <h5>Judul Buku:</h5>
+                                            <h5>Book Title:</h5>
                                             <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required placeholder="Judul">
                                         </div>
                                         <div>
-                                            <h5>Penulis:</h5>
+                                            <h5>Author:</h5>
                                             <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required placeholder="Penulis">
                                         </div>
                                         <div>
-                                            <h5>Penerbit:</h5>
+                                            <h5>Publisher:</h5>
                                             <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required placeholder="Penerbit">
                                         </div>
                                         <div>
-                                            <h5>Tahun Terbit:</h5>
+                                            <h5>Year:</h5>
                                             <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required placeholder="Tahun Terbit">
                                         </div>
                                         <div>
-                                            <h5>Cover Buku:</h5>
+                                            <h5>Book Cover:</h5>
                                             <input type="file" name="image" class="form-control my-3" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div>
-                                            <h5>Harga:</h5>
+                                            <h5>Price:</h5>
                                             <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required placeholder="Harga">
                                         </div>
                                         <div>
-                                            <h5>Stok:</h5>
+                                            <h5>Stock:</h5>
                                             <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Stok">
                                         </div>
                                         <div>
-                                            <h5>Sinopsis:</h5>
+                                            <h5>Synopsis:</h5>
                                             <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9" placeholder="Sinopsis"></textarea>
                                         </div>
                                     </div>

@@ -72,19 +72,19 @@ $result3 = mysqli_query($conn, $query3);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">ID Transaksi</div>
+                            <div class="bg-30 h-65 pt-4">ID Transaction</div>
                         </th>
                         <th class="col-4 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Nama Customer</div>
+                            <div class="bg-30 h-65 pt-4">Customer Name</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-4">Income</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Tgl. Transaksi</div>
+                            <div class="bg-30 h-65 pt-4">Date Transaction</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Keterangan</div>
+                            <div class="bg-30 h-65 pt-4">etc.</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result3)) : ?>

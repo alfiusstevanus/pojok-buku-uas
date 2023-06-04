@@ -73,22 +73,22 @@ $result3 = mysqli_query($conn, $query3);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">ID Transaksi</div>
+                            <div class="bg-30 h-65 pt-4">ID Transaction</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Buku</div>
+                            <div class="bg-30 h-65 pt-4">Book</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Jumlah</div>
+                            <div class="bg-30 h-65 pt-4">Amount</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Total Harga</div>
+                            <div class="bg-30 h-65 pt-4">Total Price</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Alamat</div>
+                            <div class="bg-30 h-65 pt-4">Address</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">Waktu</div>
+                            <div class="bg-30 h-65 pt-4">Time</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-4">Status</div>
@@ -129,7 +129,7 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="editStatusLabel">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <h5 class="modal-title" id="editStatusLabel">ID Transaction: <?= $row['id_transaksi'] ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -156,13 +156,13 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteTransaksi">ID Transaksi: <?= $row['id_transaksi'] ?></h5>
+                                        <h5 class="modal-title" id="deleteTransaksi">ID Transaction: <?= $row['id_transaksi'] ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="container">
                                             <div>
-                                                <h5>Anda yakin ingin menghapus Transaksi ini?</h5>
+                                                <h5>Are you sure want to delete this Transaction?</h5>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Cancel</button>

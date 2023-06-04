@@ -13,6 +13,15 @@ $row_user = mysqli_fetch_assoc($result);
 $total_user = $row_user['total_user'];
 $query2 = "SELECT * FROM akun WHERE status = 'User' ORDER BY id DESC";
 $result2 = mysqli_query($conn, $query2);
+
+if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $q = "SELECT * FROM akun WHERE name LIKE '%$keyword%' AND status = 'User' ORDER BY id DESC";
+} else {
+    $q = "SELECT * FROM akun WHERE status = 'User' ORDER BY id DESC";
+}
+
+$result2 = mysqli_query($conn, $q);
 ?>
 <!Doctype HTML>
 <html>
@@ -55,6 +64,12 @@ $result2 = mysqli_query($conn, $query2);
         </div>
         <div class="clearfix"></div>
         <br /><br />
+        <form class="search pb-3" method="post">
+            <input class="search-box" type="text" name="keyword" placeholder="Customer Name" />
+            <button class="btn-cari" name="cari">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
         <div class="bg-30">
             <!-- main-content start-->
             <div class="scrollable-content overflow-auto" style="height: 400px;">
@@ -67,19 +82,19 @@ $result2 = mysqli_query($conn, $query2);
                             <div class="bg-30 h-65 pt-3">Email</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Nama</div>
+                            <div class="bg-30 h-65 pt-3">Name</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-3">Telephone</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Umur</div>
+                            <div class="bg-30 h-65 pt-3">Age</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Jenis Kelamin</div>
+                            <div class="bg-30 h-65 pt-3">Gender</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Alamat</div>
+                            <div class="bg-30 h-65 pt-3">Address</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
                             <div class="bg-30 h-65 pt-3">Delete</div>
@@ -113,7 +128,7 @@ $result2 = mysqli_query($conn, $query2);
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Anda yakin ingin menghapus Akun "<?= $row['name'] ?>" secara Permanen?</h5>
+                                        <h5>Are you sure want to delete Account "<?= $row['name'] ?>" for Permanent?</h5>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
