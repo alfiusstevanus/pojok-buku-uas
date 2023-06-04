@@ -51,7 +51,7 @@ $result3 = mysqli_query($conn, $query3);
         <div class="col-div-3">
             <a href="">
                 <div class="box">
-                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <p><?= number_format($total_income) ?> IDR<br /><span>Total Income</span></p>
                     <i class="fa fa-money-bill-trend-up box-income"></i>
                 </div>
             </a>
@@ -84,7 +84,7 @@ $result3 = mysqli_query($conn, $query3);
                             <div class="bg-30 h-65 pt-4">Date Transaction</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-4">etc.</div>
+                            <div class="bg-30 h-65 pt-4">Status</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result3)) : ?>
@@ -93,7 +93,7 @@ $result3 = mysqli_query($conn, $query3);
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row["name"] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($row["total"]) ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= number_format($row["total"]) ?> IDR" readonly>
                             </td>
                             <td> <input type="date" class="form-control text-center my-3" value="<?= $row['date'] ?>" readonly>
                             </td>

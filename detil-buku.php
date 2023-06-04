@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
                         <div class="col-lg-8">
                             <div class="product__details__text">
 
-                                <h4>RP. <?= number_format($row['harga']) ?></h4>
+                                <h4><?= number_format($row['harga']) ?> IDR</h4>
                                 <h4><?= $row['judul_buku']; ?></h4>
                                 <p>Stock: <?php if ($row['stok'] > 0) {
                                                 echo $row['stok'];
@@ -108,7 +108,7 @@ if (isset($_GET['id'])) {
                                                                 <h6 class="text-center border-0 fw-semibold pt-2"><?= $row['judul_buku'] ?></h6>
                                                             </div>
                                                             <div>
-                                                                <h6 class="text-center border-0 pt-1 pb-1 fw-light">Rp. <?= number_format($row['harga']) ?></h6>
+                                                                <h6 class="text-center border-0 pt-1 pb-1 fw-light"><?= number_format($row['harga']) ?> IDR</h6>
                                                             </div>
                                                             <!-- <div>
                                                         <a class="btn btn-primary bg-success border-0 py-2 px-4 mb-1 text-center" role="button" href="detil-buku.php?id=<?= $row['id_buku'] ?>">

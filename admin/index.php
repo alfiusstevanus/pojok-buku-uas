@@ -78,7 +78,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="col-div-3">
             <a href="income.php">
                 <div class="box">
-                    <p>Rp. <?= number_format($total_income) ?><br /><span>Total Income</span></p>
+                    <p><?= number_format($total_income) ?> IDR<br /><span>Total Income</span></p>
                     <i class="fa fa-money-bill-trend-up box-income"></i>
                 </div>
             </a>

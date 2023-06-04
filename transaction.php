@@ -15,14 +15,30 @@ $subtotal = 0;
         <div class="div d-flex row justify-content-center p-5 rounded-3 shadow-lg">
             <table class="table" border="1">
                 <tr>
-                    <th class="col-1 text-center">ID Transaction</th>
-                    <th class="text-center">Date</th>
-                    <th class="col-2 text-center">Book</th>
-                    <th class="text-center">Price</th>
-                    <th class="col-1 text-center">Amount</th>
-                    <th class="text-center">Total</th>
-                    <th class="text-center">Status</th>
-                    <th class="col-1 text-center">Action</th>
+                    <th class="col-1 text-center">
+                        <div>ID Transaction</div>
+                    </th>
+                    <th class="text-center">
+                        <div class="pt-3">Date</div>
+                    </th>
+                    <th class="col-2 text-center">
+                        <div class="pt-3">Book</div>
+                    </th>
+                    <th class="text-center">
+                        <div class="pt-3">Price</div>
+                    </th>
+                    <th class="col-1 text-center">
+                        <div class="pt-3">Amount</div>
+                    </th>
+                    <th class="text-center">
+                        <div class="pt-3">Total</div>
+                    </th>
+                    <th class="text-center">
+                        <div class="pt-3">Status</div>
+                    </th>
+                    <th class="col-1 text-center">
+                        <div class="pt-3">Action</div>
+                    </th>
                 </tr>
                 <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                     <tr>
@@ -32,19 +48,19 @@ $subtotal = 0;
                         </td>
                         <td> <input type="text" name="judul_buku" class="form-control text-center my-3" value="<?= $row["judul_buku"] ?>" readonly>
                         </td>
-                        <td> <input type="text" name="harga" class="form-control text-center my-3" value="Rp. <?= number_format($row['harga']) ?>" readonly>
+                        <td> <input type="text" name="harga" class="form-control text-center my-3" value="<?= number_format($row['harga']) ?> IDR" readonly>
                         </td>
                         <td> <input type="text" name="jumlah" class="form-control text-center my-3" value="<?= $row["jumlah"] ?>" readonly>
                         </td>
-                        <td> <input type="text" name="total" class="form-control text-center my-3" value="Rp. <?= number_format($row['total']) ?>" readonly>
+                        <td> <input type="text" name="total" class="form-control text-center my-3" value="<?= number_format($row['total']) ?> IDR" readonly>
                         </td>
                         <td> <input type="text" name="status" class="form-control text-center my-3" value="<?= $row["status"] ?>" readonly>
                         </td>
                         <td>
                             <?php if ($row['status'] == 'Success') { ?>
-                                <a class="btn btn-primary my-3" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Re-purchase</a>
+                                <a class="btn btn-success my-1" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Buy again</a>
                             <?php } else if ($row['status'] == 'Shipped') { ?>
-                                <a class="btn btn-success my-3 text-center" data-bs-toggle="modal" data-bs-target="#transaksiSelesai<?= $row['id_transaksi'] ?>" role=" button">Done</a>
+                                <a class="btn btn-success my-3 ms-2 text-center" data-bs-toggle="modal" data-bs-target="#transaksiSelesai<?= $row['id_transaksi'] ?>" role=" button">Done</a>
                             <?php } else if ($row['status'] == 'In Progress') { ?>
                                 <p class="text-center mt-4 c-10">On going!</p>
                             <?php } ?>
@@ -81,7 +97,7 @@ $subtotal = 0;
                 endwhile ?>
                 <th colspan="5"></th>
                 <th colspan="3">
-                    <p class="fs-4">My Spending: <span class="c-10">Rp. <?= number_format($subtotal) ?></span></p>
+                    <p class="fs-4">My Spending: <span class="c-10"><?= number_format($subtotal) ?> IDR</span></p>
                 </th>
                 <th></th>
                 <th>&nbsp;</th>

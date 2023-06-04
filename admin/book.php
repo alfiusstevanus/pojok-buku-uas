@@ -85,28 +85,28 @@ $result2 = mysqli_query($conn, $q);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">ID</div>
+                            <div class="bg-30 h-65 pt-4">Book ID</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Judul</div>
+                            <div class="bg-30 h-65 pt-4">Title</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Penulis</div>
+                            <div class="bg-30 h-65 pt-4">Author</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Penerbit</div>
+                            <div class="bg-30 h-65 pt-4">Publisher</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-2">Tahun Terbit</div>
+                            <div class="bg-30 h-65 pt-4">Year</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Stok</div>
+                            <div class="bg-30 h-65 pt-4">Stock</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Harga</div>
+                            <div class="bg-30 h-65 pt-4">Price</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3"></div>
+                            <div class="bg-30 h-65 pt-4">Action</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result2)) : ?>
@@ -123,7 +123,7 @@ $result2 = mysqli_query($conn, $q);
                             </td>
                             <td> <input type="text" class="form-control text-center my-3" value="<?= $row['stok'] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($row['harga']) ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3" value="<?= number_format($row['harga']) ?> IDR" readonly>
                             </td>
                             <td class="text-center">
                                 <a class="btn btn-secondary my-3 text-center" data-bs-toggle="modal" data-bs-target="#manageBook<?= $row['id_buku'] ?>" role="button">Manage</a>
@@ -157,19 +157,19 @@ $result2 = mysqli_query($conn, $q);
                                                 <div class="col-lg-6">
                                                     <div>
                                                         <h5>Book Title:</h5>
-                                                        <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required>
+                                                        <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required placeholder="Input Title">
                                                     </div>
                                                     <div>
                                                         <h5>Author:</h5>
-                                                        <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required>
+                                                        <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required placeholder="Input Author">
                                                     </div>
                                                     <div>
                                                         <h5>Publisher:</h5>
-                                                        <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required>
+                                                        <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required placeholder="Input Publisher">
                                                     </div>
                                                     <div>
                                                         <h5>Year:</h5>
-                                                        <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required>
+                                                        <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required placeholder="Input Year">
                                                     </div>
                                                     <div>
                                                         <h5>Update Cover:</h5>
@@ -179,15 +179,15 @@ $result2 = mysqli_query($conn, $q);
                                                 <div class="col-lg-6">
                                                     <div>
                                                         <h5>Price:</h5>
-                                                        <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required>
+                                                        <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required placeholder="Input Price">
                                                     </div>
                                                     <div>
                                                         <h5>Stock:</h5>
-                                                        <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required>
+                                                        <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Input Stock">
                                                     </div>
                                                     <div>
                                                         <h5>Synopsis:</h5>
-                                                        <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9"><?= $row['sinopsis'] ?></textarea>
+                                                        <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9" placeholder="Input Synopsis"><?= $row['sinopsis'] ?></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -216,19 +216,19 @@ $result2 = mysqli_query($conn, $q);
                                     <div class="col-lg-6">
                                         <div>
                                             <h5>Book Title:</h5>
-                                            <input type="text" name="judul_buku" class="form-control my-3" value="<?= $row['judul_buku'] ?>" required placeholder="Judul">
+                                            <input type="text" name="judul_buku" class="form-control my-3" required placeholder="Input Title">
                                         </div>
                                         <div>
                                             <h5>Author:</h5>
-                                            <input type="text" name="penulis_buku" class="form-control my-3" value="<?= $row['penulis_buku'] ?>" required placeholder="Penulis">
+                                            <input type="text" name="penulis_buku" class="form-control my-3" required placeholder="Input Author">
                                         </div>
                                         <div>
                                             <h5>Publisher:</h5>
-                                            <input type="text" name="penerbit_buku" class="form-control my-3" value="<?= $row['penerbit_buku'] ?>" required placeholder="Penerbit">
+                                            <input type="text" name="penerbit_buku" class="form-control my-3" required placeholder="Input Publisher">
                                         </div>
                                         <div>
                                             <h5>Year:</h5>
-                                            <input type="text" name="tahun_terbit" class="form-control my-3" value="<?= $row['tahun_terbit'] ?>" required placeholder="Tahun Terbit">
+                                            <input type="text" name="tahun_terbit" class="form-control my-3" required placeholder="Input Year">
                                         </div>
                                         <div>
                                             <h5>Book Cover:</h5>
@@ -238,15 +238,15 @@ $result2 = mysqli_query($conn, $q);
                                     <div class="col-lg-6">
                                         <div>
                                             <h5>Price:</h5>
-                                            <input type="text" name="harga" class="form-control my-3" value="<?= $row['harga'] ?>" required placeholder="Harga">
+                                            <input type="text" name="harga" class="form-control my-3" required placeholder="Input Price">
                                         </div>
                                         <div>
                                             <h5>Stock:</h5>
-                                            <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Stok">
+                                            <input type="text" name="stok" class="form-control my-3" required placeholder="Input Stock">
                                         </div>
                                         <div>
                                             <h5>Synopsis:</h5>
-                                            <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9" placeholder="Sinopsis"></textarea>
+                                            <textarea name="sinopsis" class="form-control my-3 no-resize" required rows="9" placeholder="Input Synopsis"></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-footer">

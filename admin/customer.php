@@ -76,28 +76,28 @@ $result2 = mysqli_query($conn, $q);
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">ID</div>
+                            <div class="bg-30 h-65 pt-4">ID</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Email</div>
+                            <div class="bg-30 h-65 pt-4">Email</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Name</div>
+                            <div class="bg-30 h-65 pt-4">Name</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Telephone</div>
+                            <div class="bg-30 h-65 pt-4">Telephone</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Age</div>
+                            <div class="bg-30 h-65 pt-4">Age</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Gender</div>
+                            <div class="bg-30 h-65 pt-4">Gender</div>
                         </th>
                         <th class="col-2 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Address</div>
+                            <div class="bg-30 h-65 pt-4">Address</div>
                         </th>
                         <th class="col-1 text-center c-10 p-0">
-                            <div class="bg-30 h-65 pt-3">Delete</div>
+                            <div class="bg-30 h-65 pt-4">Action</div>
                         </th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result2)) : ?>

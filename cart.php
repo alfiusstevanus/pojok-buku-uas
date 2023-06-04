@@ -18,8 +18,7 @@ include('layouts/header.php');
                     <th class="col-2 text-center">Publisher</th>
                     <th class="col-2 text-center">Author</th>
                     <th class="col-2 text-center">Price</th>
-                    <th class="col-1 text-center"></th>
-                    <th class="col-1 text-center"></th>
+                    <th class="col-1 text-center" colspan="2">Action</th>
                 </tr>
                 <?php
                 $grandtotal = 0;
@@ -35,7 +34,7 @@ include('layouts/header.php');
                         </td>
                         <td> <input type="text" class="form-control text-center my-3" value="<?= $val["penulis"] ?>" readonly>
                         </td>
-                        <td> <input type="text" class="form-control text-center my-3" value="Rp. <?= number_format($val['harga']) ?>" readonly>
+                        <td> <input type="text" class="form-control text-center my-3" value="<?= number_format($val['harga']) ?> IDR" readonly>
                         </td>
                         <td class="text-center">
                             <a class="btn btn-success my-3 text-center" href="detil-buku.php?id=<?= $val["id_buku"] ?>" role="button">Beli</a>
@@ -50,7 +49,7 @@ include('layouts/header.php');
                 ?>
                 <th colspan="4"></th>
                 <th>
-                    <h5>Total: <span class="c-10">Rp. <?= number_format($grandtotal) ?></span></h5>
+                    <h5>Total: <span class="c-10"><?= number_format($grandtotal) ?> IDR</span></h5>
                 </th>
                 <th>&nbsp;</th>
             </table>
