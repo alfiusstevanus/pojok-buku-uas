@@ -86,7 +86,7 @@ $result2 = mysqli_query($conn, $q);
 
         <div class="bg-30">
             <!-- main-content start-->
-            <div class="scrollable-content overflow-auto" style="height: 400px;">
+            <div class="scrollable-content overflow-auto pb-5" style="height: 400px;">
                 <table class="table py-0" border="0">
                     <tr class="sticky sticky-top">
                         <th class="col-1 text-center c-10 p-0">
