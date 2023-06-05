@@ -20,17 +20,21 @@ $result = mysqli_query($conn, $q);
 ?>
 <section>
     <div class="container">
-        <div class="d-flex row align-items-center">
-            <div class="col-md-4 d-flex flex-inline">
-                <h1 class="fs-2 welcoming pt-5">Book Corner List</h1>
-            </div>
-            <form class="search pb-3" method="post">
-                <input class="search-box" type="text" name="keyword" placeholder="Book Title" />
-                <button class="btn-cari" name="cari">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
+        <div class="tittle-buku">
+            <h1 class="fs-2 welcoming pt-3 pb-2">Book Corner List</h1>
         </div>
+
+        <div class=" mb-4 bg-30 rounded-4">
+            <div class=" d-flex justify-content-center p-5 align-items-center">
+                <form class="search" method="post">
+                    <input class="search-box border-0" name="keyword" id="myInput" placeholder="  Book Title" autocomplete="off" />
+                    <button class="btn-cari ms-2 p-2" name="cari">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <div class="row">
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <div class=" col-lg-3">
@@ -57,6 +61,16 @@ $result = mysqli_query($conn, $q);
         </div>
     </div>
 </section>
+<script>
+    // Mendapatkan elemen input
+    var input = document.getElementById("myInput");
+
+    // Mengatur posisi kursor pada indeks ke-5
+    input.setSelectionRange(7, 7);
+
+    // Fokuskan elemen input
+    input.focus();
+</script>
 <?php
 include('layouts/footer.php');
 ?>

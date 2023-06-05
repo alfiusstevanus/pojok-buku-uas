@@ -64,12 +64,18 @@ $result2 = mysqli_query($conn, $q);
         </div>
         <div class="clearfix"></div>
         <br /><br />
-        <form class="search pb-3" method="post">
-            <input class="search-box" type="text" name="keyword" placeholder="Customer Name" />
-            <button class="btn-cari" name="cari">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
+        
+        <div class=" mb-4 bg-30 ">
+            <div class=" d-flex justify-content-center p-4 align-items-center">
+                <form class="search" method="post">
+                    <input class="search-box border-0" type="text" name="keyword" placeholder=" Customer Name" autocomplete="off" />
+                    <button class="btn-cari ms-2 p-1" name="cari">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <div class="bg-30">
             <!-- main-content start-->
             <div class="scrollable-content overflow-auto" style="height: 400px;">

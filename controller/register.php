@@ -14,8 +14,9 @@ if (!empty($_FILES['photo']['tmp_name'])) {
     $photo_name = rand(0, 9999) . "_" . str_replace(' ', '', $name) . ".jpg";
     move_uploaded_file($photo, "../images/profile/" . $photo_name);
 } else {
-    $photo_name =  'default.jpg';
+    $photo_name = 'default.jpg';
 }
+
 $query = "INSERT INTO akun VALUES('','$email','$name','$password','$telephone','User','$photo_name','$kelamin','$umur',0,'$alamat')";
 
 if (mysqli_query($conn, $query)) {
