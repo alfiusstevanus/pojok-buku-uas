@@ -188,7 +188,7 @@ $result2 = mysqli_query($conn, $q);
                                                     </div>
                                                     <div>
                                                         <h5>Stock:</h5>
-                                                        <input type="text" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Input Stock">
+                                                        <input type="number" name="stok" class="form-control my-3" value="<?= $row['stok'] ?>" required placeholder="Input Stock">
                                                     </div>
                                                     <div>
                                                         <h5>Synopsis:</h5>
@@ -196,7 +196,7 @@ $result2 = mysqli_query($conn, $q);
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-danger mt-3" data-bs-dismiss="modal">Close</button>
                                                     <input type="submit" class="btn btn-primary btn-success mt-3" value="Update">
                                                 </div>
                                             </div>
@@ -247,7 +247,7 @@ $result2 = mysqli_query($conn, $q);
                                         </div>
                                         <div>
                                             <h5>Stock:</h5>
-                                            <input type="text" name="stok" class="form-control my-3" required placeholder="Input Stock">
+                                            <input type="number" name="stok" class="form-control my-3" required placeholder="Input Stock">
                                         </div>
                                         <div>
                                             <h5>Synopsis:</h5>
@@ -255,7 +255,7 @@ $result2 = mysqli_query($conn, $q);
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-danger mt-3" data-bs-dismiss="modal">Close</button>
                                         <input type="submit" class="btn btn-primary btn-success mt-3" value="Add">
                                     </div>
                                 </div>

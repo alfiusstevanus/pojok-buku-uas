@@ -97,7 +97,7 @@ $result3 = mysqli_query($conn, $query3);
                             </td>
                             <td> <input type="date" class="form-control text-center my-3" value="<?= $row['date'] ?>" readonly>
                             </td>
-                            <td> <input type="text" class="form-control text-center my-3" value="<?= $row['status'] ?>" readonly>
+                            <td> <input type="text" class="form-control text-center my-3 text-success" value="<?= $row['status'] ?>!" readonly>
                             </td>
                         </tr>
                     <?php endwhile ?>
