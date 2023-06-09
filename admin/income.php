@@ -2,7 +2,7 @@
 $namaFile = 'orders.php';
 include '../server/connection.php';
 session_start();
-if ($_SESSION['status'] == 'User') {
+if (isset($_SESSION['status']) && $_SESSION['status'] == 'User') {
     header('location: ../index.php');
     exit;
 }

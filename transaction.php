@@ -60,7 +60,7 @@ $subtotal = 0;
                             <?php if ($row['status'] == 'Success') { ?>
                                 <a class="btn btn-success my-1" href="detil-buku.php?id=<?= $row["id_buku"] ?>" role="button">Buy again</a>
                             <?php } else if ($row['status'] == 'Shipped') { ?>
-                                <a class="btn btn-success my-3 ms-2 text-center" data-bs-toggle="modal" data-bs-target="#transaksiSelesai<?= $row['id_transaksi'] ?>" role=" button">Done</a>
+                                <a class="btn btn-success my-3 ms-2 text-center" data-bs-toggle="modal" data-bs-target="#transaksiSelesai<?= $row['id_transaksi'] ?>" role=" button">Receive</a>
                             <?php } else if ($row['status'] == 'In Progress') { ?>
                                 <p class="text-center mt-4 c-10">On going!</p>
                             <?php } ?>
