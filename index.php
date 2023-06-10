@@ -29,7 +29,7 @@ include('layouts/header.php');
         <h4 class="h4 mb-4">SPRING - DISCOUNT</h4>
         <h1 class="mt-2">Enjoy the convenience of book search</h1>
         <p class="lead h3 ">Knowledge is contained within the pages, building new worlds in the imagination.</p>
-        <button class="mt-5 ">Shop Now</button>
+        <a href="buku.php"><button class="mt-5 ">Shop Now</button></a>
 
         <div class="social-icon mt-5">
             <h5 class="mb-2 lead">Books Corner Social</h5>
