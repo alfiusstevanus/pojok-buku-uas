@@ -86,7 +86,7 @@ include('layouts/header.php');
                             <img src="images/Free Phone Screen Savers! - Sara Rosett.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Books Wallpaper _ Book Wall 📚.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
+                            <img src="images/Books Wallpaper _ Book Wall.jpeg.jpg" class="d-block w-100" class="img-fluid" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

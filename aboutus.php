@@ -11,7 +11,7 @@ include('layouts/header.php');
         <div class="row p-2">
             <div class="col-md-12">
                 <div class="card text-bg-dark">
-                    <img src="images/pexels-huỳnh-đạt-2177482.jpg" class="card-img object-fit-cover" height="600px" style="opacity: 0.35;" alt="...">
+                    <img src="images/gambar1.jpg" class="card-img object-fit-cover" height="600px" style="opacity: 0.35;" alt="...">
                     <div class="card-aboutus card-img-overlay mt-5 pt-5 ">
                         <div class="text-center mb-3">
                             <img src="images/logo books cornmb-4 er 4. style=" border-radius:15px;"png" class="text-center" height="50px" alt="">
